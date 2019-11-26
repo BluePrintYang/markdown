@@ -137,7 +137,7 @@ reverse() // 反转字符串
 
 不同:
 
-> 1.StringBuffer是线程安全的，操作效率低，StringBuffer是线程非安全的,操作效率高
+> 1.StringBuffer是线程安全的，操作效率低，StringBuilder是线程非安全的,操作效率高
 > 2.StringBuffer是jdk1.0出现的, StringBuilder 是jdk1.5的时候出现的.
 
 #### 三 System 和 RunTime类
