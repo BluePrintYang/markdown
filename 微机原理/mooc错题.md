@@ -60,7 +60,7 @@
 
 1. 以2^16^为模，将C678H和94FBH相加，A、C、O、P、S、Z 六种状态标志的值为
 
-<img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191025165745672.png" alt="image-20191025165745672" style="zoom:35%;" />
+<img src="..\img\image-20191025165745672.png" alt="image-20191025165745672" style="zoom:35%;" />
 
 2. 设实模式下,DS=1300H，SS=1400H，BP=1500H，SI=0100H。则指令“MOV AX， [BP+SI-200H]”的源操作数的物理地址为==15400H==
 
@@ -76,7 +76,7 @@
 
 5. 已知[X]~补~=00010111B，[Y]~补~=01101101B，则[X-Y]~补~==AA==H，且运算结果使6个状态位CF=0；SF=1；ZF=0；AF=0；PF=1；OF=0。
 
- <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191025172543602.png" alt="image-20191025172543602" style="zoom:50%;" />
+ <img src="..\img\image-20191025172543602.png" alt="image-20191025172543602" style="zoom:50%;" />
 
 6.  设BX=1234H，DS=2000H，（21234H）=78H, （21235H）=56H.则指令LEA SI,[BX+1]执行后，SI的值是==1235==H
 

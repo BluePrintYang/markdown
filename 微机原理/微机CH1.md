@@ -208,7 +208,7 @@ $$
 
 2. 四位的加法器
 
-![由四位全加器组成](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569674196180.png)
+![由四位全加器组成](..\img\1569674196180.png)
 
 在上述加法器上进行:  0111 + 0110
 
@@ -261,7 +261,7 @@ $$
 
 ###### 计算机怎样表示进位和溢出
 
-![计算机怎样表示进位和溢出](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569675099285.png)
+![计算机怎样表示进位和溢出](..\img\1569675099285.png)
 
 1. 运算器对有符号数和无符号数同样对待   
 2. 最高位的进位值保存在“进位标志寄存器”中
@@ -293,11 +293,11 @@ $$
 
   冯诺依曼计算机体系结构思想
 
-  <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569675635110.png" alt="冯诺依曼计算机体系结构思想" style="zoom:80%;" />
+  <img src="..\img\1569675635110.png" alt="冯诺依曼计算机体系结构思想" style="zoom:80%;" />
 
 ##### 2.微型机硬件结构
 
-![微型机硬件结构](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569675742743.png)
+![微型机硬件结构](..\img\1569675742743.png)
 
 1. 以CPU为核心通过3条总线连接存储器、I/O接口
 

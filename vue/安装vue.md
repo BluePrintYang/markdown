@@ -37,7 +37,7 @@ cnpm install
 
 如图
 
-![1569769640712](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569769640712.png)
+![1569769640712](..\img\1569769640712.png)
 
 ```bash
 cd firstApp

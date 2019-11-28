@@ -8,23 +8,23 @@ vue create test //test是项目名
 
 
 
-![1570620394501](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1570620394501.png)
+![1570620394501](..\img\1570620394501.png)
 
 选择Mannally，回车
 
-![1570620421331](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1570620421331.png)
+![1570620421331](..\img\1570620421331.png)
 
 选择basel和router(空格选择)，回车确认
 
-![1570620447676](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1570620447676.png)
+![1570620447676](..\img\1570620447676.png)
 
 使用history mode
 
-![1570620517332](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1570620517332.png)
+![1570620517332](..\img\1570620517332.png)
 
 选择packa.json
 
-![1570620545505](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1570620545505.png)
+![1570620545505](..\img\1570620545505.png)
 
 后面直接回车等待项目创建完成
 

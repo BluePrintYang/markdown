@@ -138,8 +138,7 @@ COM文件的执行级别高于EXE文件,同名的BAT(批处理)文件执行级�
 
 <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191027112650737.png" alt="image-20191027112650737" style="zoom:70%;" />
 
-
-<img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191027112711895.png" alt="image-20191027112711895" style="zoom:67%;" />
+<img src="..\img\image-20191027112711895.png" alt="image-20191027112711895" style="zoom:67%;" />
 
 #### COM文件的编程格式
 
@@ -148,7 +147,7 @@ COM文件的执行级别高于EXE文件,同名的BAT(批处理)文件执行级�
 - ==需使用定位ORG==伪指令将程序的启动指令存放在==代码段偏移地址为100H==的单元
 - 适合于编写==中小型==程序
 
-<img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191027113054888.png" alt="image-20191027113054888" style="zoom:67%;" />
+<img src="..\img\image-20191027113054888.png" alt="image-20191027113054888" style="zoom:67%;" />
 
 
 

@@ -18,7 +18,7 @@
 
 　　　　进入@SpringBootApplication的源码：
 
-![img](https://ask.qcloudimg.com/http-save/yehe-2161968/sqeschzq6u.png?imageView2/2/w/1620)
+![img](..\img\1620)
 
 　　　　而**@ComponentScan的默认扫描范围为本包及子包**；
 
@@ -77,14 +77,32 @@ url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&serverTimezo
 
 
 
-
-
-#### 解决跨域问题
+### 解决跨域问题
 
 添加@CrossOrigin注解
 
 
 
-#### 加载yml失败
+### 加载yml失败
 
 删除带所有带中文的注释
+
+
+
+
+
+### controller调用service报错空指针异常
+
+我的错误原因： controller层中的service没有注入
+
+解决方法：加注解（@Resource @Autowired） 
+
+其他原因
+
+调用controller报空指针有两种情况： 
+
+1.  service 或者mapper 没有加载到spring容器中 ，引用时候肯定报空指针
+
+2.  service加载到spring容器中了， 但是controller中定义的方法为private，私有方法被接口访问时候，因为private作用域的问题，无法获取该方法，报空指针
+
+3. service层没有使用@Service修饰(接口不需要加，在impl中加)   

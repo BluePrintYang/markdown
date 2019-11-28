@@ -29,7 +29,7 @@
 
 ​	例:12345H单元中有一条指令    MOV   AX,6789H
 
-​	<img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191026144244523.png" alt="image-20191026144244523" style="zoom:67%;" />
+​	<img src="..\img\image-20191026144244523.png" alt="image-20191026144244523" style="zoom:67%;" />
 
 #### 符号指令的书写格式
 
@@ -511,15 +511,15 @@ RET
           当D标志为1时，SI,DI减量修改
    - 有重复前缀的格式          REP	MOVSB
      			                             REP	MOVSW
-       			                             REP	MOVSD
+           			                             REP	MOVSD
      准备工作：① 同基本型格式
      	               ② 欲传送的元素个数→CX 		
 
 
-   <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191026205904705.png" alt="image-20191026205904705" style="zoom:67%;" />
+   <img src="..\img\image-20191026205904705.png" alt="image-20191026205904705" style="zoom:67%;" />
 
-   
-   <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191026205926577.png" alt="image-20191026205926577" style="zoom:67%;" />
+
+   <img src="..\img\image-20191026205926577.png" alt="image-20191026205926577" style="zoom:67%;" />
 
 2. 串装入：装入SI
 

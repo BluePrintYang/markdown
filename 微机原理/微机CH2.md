@@ -55,7 +55,7 @@ MIPS是Millions of Instruction Per Second的缩写，用来表示微处理器的
 
 #### 微处理器的内部结构
 
-![1569680153778](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569680153778.png)
+![1569680153778](..\img\1569680153778.png)
 
 ##### 微处理器的基本功能模块
 
@@ -87,7 +87,7 @@ MIPS是Millions of Instruction Per Second的缩写，用来表示微处理器的
 
    ##### 通用寄存器
 
-![1569681127674](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569681127674.png)
+![1569681127674](..\img\1569681127674.png)
 
 - AX (accumulator)-----累加器
 
@@ -118,7 +118,7 @@ IP、SP、BP、SI、DI：为寻址存贮单元提供偏移地址。其中：
 
 ##### 段寄存器
 
-![1569681235724](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569681235724.png)
+![1569681235724](..\img\1569681235724.png)
 
 CS、DS、ES、SS------4个段寄存器，和偏移地址寄存器一起形成20位存储器物理地址，对存储器中存放的程序、数据、堆栈区域加以区别、寻址。
 
@@ -128,7 +128,7 @@ CS、DS、ES、SS------4个段寄存器，和偏移地址寄存器一起形成20
 
 ##### 标志寄存器
 
-![1569681322520](C:\Users\16711\AppData\Roaming\Typora\typora-user-images\1569681322520.png)
+![1569681322520](..\img\1569681322520.png)
 
 标志寄存器FLAGS又称为程序状态字PSW，为16位寄存器，
 
@@ -213,7 +213,7 @@ CS、DS、ES、SS------4个段寄存器，和偏移地址寄存器一起形成20
 
    
 
-   <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191026145851152.png" alt="image-20191026145851152" style="zoom:47%;" />
+   <img src="..\img\image-20191026145851152.png" alt="image-20191026145851152" style="zoom:47%;" />
 
    <img src="C:\Users\16711\AppData\Roaming\Typora\typora-user-images\image-20191026150024044.png" alt="image-20191026150024044" style="zoom:40%;" />
 
