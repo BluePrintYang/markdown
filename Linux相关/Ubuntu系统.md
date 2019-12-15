@@ -18,8 +18,6 @@ ssh远程连接
 
 
 
-
-
 ```shell
 tar -zxvf  #解压缩
 ```
