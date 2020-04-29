@@ -11,3 +11,25 @@ pushed:>2019-09-01 2019年9月1日后有更新的
 language:java 用Java编写的项目
 
  
+
+配置代理
+
+```shell
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+
+撤销代理：
+
+```shell
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+查看代理：
+
+```shell
+git config --global --get http.proxy
+git config --global --get https.proxy
+```
+
