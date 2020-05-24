@@ -298,5 +298,5 @@ public class NestedClass {
 
 Lambda表达式的结果就是被当成对象
 
-
+里面的外部变量必须被final修饰
 

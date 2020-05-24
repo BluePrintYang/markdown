@@ -106,3 +106,16 @@ url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&serverTimezo
 2.  service加载到spring容器中了， 但是controller中定义的方法为private，私有方法被接口访问时候，因为private作用域的问题，无法获取该方法，报空指针
 
 3. service层没有使用@Service修饰(接口不需要加，在impl中加)   
+
+
+
+### 部署相关
+
+
+
+```shell
+jps #查看Java进程
+kill -9 <pid> #杀死进程
+nohup java -jar xxx.jar #退出命令行后仍然运行
+```
+
