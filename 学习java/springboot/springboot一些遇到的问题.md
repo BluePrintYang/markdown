@@ -116,6 +116,7 @@ url: jdbc:mysql://localhost:3306/springboot?characterEncoding=utf-8&serverTimezo
 ```shell
 jps #查看Java进程
 kill -9 <pid> #杀死进程
+taskkill /pid <pid> #Windows命令行
 nohup java -jar xxx.jar #退出命令行后仍然运行
 ```
 
