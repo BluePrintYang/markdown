@@ -218,7 +218,36 @@ public class FruitRun {
 
 
 
+### 泛型
 
+#### 通配符概念
+
+通配符类型中，允许类型参数变化。例如`List<? extends Father>`表示任何泛型List类型，它的类型参数是Father的子类，如`List<Son>`
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        List<Son> list = new ArrayList<>();
+        test(list);//这里会编译错误
+    }
+
+    static void test(List<Father> list) {
+        System.out.println(list.get(0));
+    }
+
+    class Father {
+
+    }
+
+    class Son extends Father{
+
+    }
+}
+```
+
+可以将test函数参数改成`List<? extends Father>`类型
+
+`List<? super Son>`表示任何泛型List类型，它的类型参数是Son的父类，例如`List<Father>`
 
 ### Java内部类
 

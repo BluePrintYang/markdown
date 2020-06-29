@@ -79,9 +79,27 @@ Java跨平台的原因：
 
 
 
+### CMS
+
+#### 三色标记
+
+- 黑：标记完成
+
+- 白：没有遍历
+
+- 灰：孩子还没有标记
 
 
 
+### G1
+
+#### SATB Snapshot At the Beginning
+
+
+
+### ZGC
+
+#### Colored Pointers
 
 
 
@@ -189,4 +207,18 @@ public static final int v = 8080;//在编译阶段会为v生成ConstantValue属�
 应用程序类加载器
 
 
+
+### 调优
+
+HotSpot参数分类
+
+> 标准：- 开头，所有HotSpot都支持
+>
+> 非标准： -X 开头，特定版本HotSpot支持特定指令
+>
+> 不稳定：-XX 开头，下个版本可能取消
+
+
+
+arthas工具
 

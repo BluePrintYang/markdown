@@ -120,3 +120,65 @@ taskkill /pid <pid> #Windows命令行
 nohup java -jar xxx.jar #退出命令行后仍然运行
 ```
 
+
+
+### 数据库第三次实验
+
+#### 前端传日期失败
+
+input中使用text不用datetimelocal
+
+#### 日期时区不对导致操作数据库失败
+
+```Java
+date.setHours(date.getHours()-14);//获取日期时更改相差的时间
+```
+
+```Java
+//另
+Date date1 = new Date(2020-1900, Calendar.JULY,10,10,11,11);//如果不-2020，年份为3920
+Date date2 = new Date(2020-1900, Calendar.JULY,10,10,11,11);
+System.out.println(date1==date2);//false
+System.out.println(date1.equals(date2));//true
+```
+
+#### 通过Session和th:if隐藏一些内容
+
+```Java
+@RequestMapping("/login")
+public String login(User user, Model model, HttpSession session) {
+    if (checkUser(user)) {
+        session.setAttribute("loginUser", user.getUsername());
+        session.setAttribute("userType", user.getUserType());
+        return "redirect:/main.html";
+    } else {
+        model.addAttribute("msg", "用户名或密码错误");
+        model.addAttribute("type", user.getUserType());
+        return "login";
+    }
+}
+```
+
+```html
+<th th:if="${session.userType==1}">操作</th>
+<p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+```
+
+#### Thymeleaf传两个参数，Controller接收
+
+```html
+<a class="btn btn-sm btn-primary" onclick="return confirm('确定要修改吗？')"
+  th:href="@{/toUpdatePage/{flight_id}/{date}/(flight_id=${flight.getFlight_id()},date=${flight.getDate()})}">编辑</a>
+<a class="btn btn-sm btn-danger" onclick="return confirm('确定要删除吗？')"
+  th:href="@{/deleteFlight/{flight_id}/{date}/(flight_id=${flight.getFlight_id()},date=${flight.getDate()})}">删除</a>
+```
+
+```Java
+@GetMapping("/toUpdatePage/{flight_id}/{date}")
+public String toUpdatePage(@PathVariable("flight_id") String flight_id, @PathVariable("date") Date date) {
+}
+@GetMapping("/deleteFlight/{flight_id}/{date}")
+public String deleteFlight(@PathVariable("flight_id") String flight_id, @PathVariable("date") Date date ){
+}
+```
+
