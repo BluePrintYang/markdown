@@ -107,7 +107,7 @@ https://github.com/rgl/redis/downloads
 
 ### Linux安装
 
-6.x以上版本需要更新gcc9
+6.x以上版本需要更新gcc
 
 ```
 tar -xzvf
