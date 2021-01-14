@@ -1,6 +1,7 @@
-- [Linux相关](Linux相关/README.md)
+# Summary
 
-    - [Make工具的使用](Linux相关/make工具的使用.md)
+- [Linux相关](Linux相关/README.md)
+- [Make工具的使用](Linux相关/make工具的使用.md)
 - [Springboot](springboot/README.md)
 
     - [Springboot一些遇到的问题](springboot/springboot一些遇到的问题.md)
@@ -16,8 +17,7 @@
     - [消息队列](其他/消息队列.md)
     - [爬虫](其他/爬虫.md)
 - [刷题](刷题/README.md)
-
-    - [NOJ](刷题/NOJ.md)
+- [NOJ](刷题/NOJ.md)
     - [Leetcode](刷题/leetcode/README.md)
     - [107简单题](刷题/leetcode/107简单题.md)
         - [2两数相加](刷题/leetcode/2两数相加.md)
