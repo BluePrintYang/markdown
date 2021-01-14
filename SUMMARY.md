@@ -1,80 +1,75 @@
+- [Linux相关](Linux相关/README.md)
 
-## Linux相关
+    - [Make工具的使用](Linux相关/make工具的使用.md)
+- [Springboot](springboot/README.md)
 
-- [Make工具的使用](Linux相关/make工具的使用.md)
+    - [Springboot一些遇到的问题](springboot/springboot一些遇到的问题.md)
+- [Vue](vue/README.md)
 
-## Springboot
+    - [Vue+Ssm跨域问题](vue/vue+ssm跨域问题.md)
+    - [Vue Cli3](vue/vue-cli3.md)
+    - [安装Vue](vue/安装vue.md)
+- [其他](其他/README.md)
 
-- [Springboot一些遇到的问题](springboot/springboot一些遇到的问题.md)
+    - [分布式系统](其他/分布式系统.md)
+    - [图解Http](其他/图解http.md)
+    - [消息队列](其他/消息队列.md)
+    - [爬虫](其他/爬虫.md)
+- [刷题](刷题/README.md)
 
-## Vue
-
-- [Vue+Ssm跨域问题](vue/vue+ssm跨域问题.md)
-- [Vue Cli3](vue/vue-cli3.md)
-- [安装Vue](vue/安装vue.md)
-
-## 刷题
-
-- [NOJ](刷题/NOJ.md)
-- [Leetcode]()
+    - [NOJ](刷题/NOJ.md)
+    - [Leetcode](刷题/leetcode/README.md)
     - [107简单题](刷题/leetcode/107简单题.md)
-    - [2两数相加](刷题/leetcode/2两数相加.md)
-    - [3无重复子串的最大长度](刷题/leetcode/3无重复子串的最大长度.md)
-- [扇贝杯Csdn](刷题/扇贝杯csdn.md)
-- [排序算法](刷题/排序算法.md)
-- [蓝桥杯](刷题/蓝桥杯.md)
-- [蓝桥杯热身赛](刷题/蓝桥杯热身赛.md)
-- [计算机等级考试(C语言)](刷题/计算机等级考试(C语言).md)
+        - [2两数相加](刷题/leetcode/2两数相加.md)
+        - [3无重复子串的最大长度](刷题/leetcode/3无重复子串的最大长度.md)
+    - [扇贝杯Csdn](刷题/扇贝杯csdn.md)
+    - [排序算法](刷题/排序算法.md)
+    - [蓝桥杯](刷题/蓝桥杯.md)
+    - [蓝桥杯热身赛](刷题/蓝桥杯热身赛.md)
+    - [计算机等级考试(C语言)](刷题/计算机等级考试(C语言).md)
+- [博客](博客/README.md)
 
-## 博客
+    - [Next主题配置](博客/next主题配置.md)
+    - [一些问题的记录](博客/一些问题的记录.md)
+- [学习Java](学习java/README.md)
 
-- [Next主题配置](博客/next主题配置.md)
-- [一些问题的记录](博客/一些问题的记录.md)
+    - [AQS](学习java/AQS.md)
+    - [HashMap的简单实现](学习java/HashMap的简单实现.md)
+    - [JavaByteCode](学习java/JavaByteCode.md)
+    - [Java基础](学习java/Java基础.md)
+    - [Java多线程](学习java/Java多线程.md)
+    - [Java多线程并发](学习java/Java多线程并发.md)
+    - [Java爬虫](学习java/Java爬虫.md)
+    - [Java集合](学习java/Java集合.md)
+    - [Java常用类](学习java/java常用类.md)
+    - [Jvm](学习java/jvm.md)
+    - [Noifelse](学习java/noifelse.md)
+    - [Socket](学习java/socket.md)
+    - [一些Java方法](学习java/一些Java方法.md)
+    - [一些其他人写的博客](学习java/一些其他人写的博客.md)
+    - [硬核空间](学习java/硬核空间.md)
+    - [遇到的问题](学习java/遇到的问题.md)
+    - [阻塞队列](学习java/阻塞队列.md)
+- [安卓开发](安卓开发/README.md)
 
-## 学习Java
+    - [First App](安卓开发/First App.md)
+    - [Problems](安卓开发/problems.md)
+- [工具](工具/README.md)
 
-- [AQS](学习java/AQS.md)
-- [HashMap的简单实现](学习java/HashMap的简单实现.md)
-- [JavaByteCode](学习java/JavaByteCode.md)
-- [Java基础](学习java/Java基础.md)
-- [Java多线程](学习java/Java多线程.md)
-- [Java多线程并发](学习java/Java多线程并发.md)
-- [Java爬虫](学习java/Java爬虫.md)
-- [Java集合](学习java/Java集合.md)
-- [Java常用类](学习java/java常用类.md)
-- [Jvm](学习java/jvm.md)
-- [Noifelse](学习java/noifelse.md)
-- [Socket](学习java/socket.md)
-- [一些Java方法](学习java/一些Java方法.md)
-- [一些其他人写的博客](学习java/一些其他人写的博客.md)
-- [硬核空间](学习java/硬核空间.md)
-- [遇到的问题](学习java/遇到的问题.md)
-- [阻塞队列](学习java/阻塞队列.md)
+    - [IDEA](工具/IDEA.md)
+    - [Docker](工具/docker.md)
+    - [Github](工具/github.md)
+- [数据库](数据库/README.md)
 
-## 安卓开发
+    - [MVCC](数据库/MVCC.md)
+    - [MySQL](数据库/MySQL.md)
+    - [Redis](数据库/Redis.md)
+- [数据结构知识](数据结构知识/README.md)
 
-- [First App](安卓开发/First App.md)
-- [Problems](安卓开发/problems.md)
+    - [大话数据结构笔记1](数据结构知识/大话数据结构笔记1.md)
+    - [大话数据结构笔记2](数据结构知识/大话数据结构笔记2.md)
+- [面试笔试](面试笔试/README.md)
 
-## 工具
-
-- [IDEA](工具/IDEA.md)
-- [Docker](工具/docker.md)
-- [Github](工具/github.md)
-
-## 数据库
-
-- [MVCC](数据库/MVCC.md)
-- [MySQL](数据库/MySQL.md)
-- [Redis](数据库/Redis.md)
-
-## 数据结构知识
-
-- [大话数据结构笔记1](数据结构知识/大话数据结构笔记1.md)
-- [大话数据结构笔记2](数据结构知识/大话数据结构笔记2.md)
-
-## 面试笔试
-
-- [字节跳动5月11日笔试](面试笔试/字节跳动5月11日笔试.md)
-- [阿里3月23日笔试](面试笔试/阿里3月23日笔试.md)
-- [面试突击](面试笔试/面试突击.md)
+    - [字节跳动5月11日笔试](面试笔试/字节跳动5月11日笔试.md)
+    - [阿里3月23日笔试](面试笔试/阿里3月23日笔试.md)
+    - [面试突击](面试笔试/面试突击.md)

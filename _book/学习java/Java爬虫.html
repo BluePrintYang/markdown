@@ -1,0 +1,1292 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java爬虫 · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Java集合.html" />
+    
+    
+    <link rel="prev" href="Java多线程并发.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Java爬虫</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="jsoup-&#x65B9;&#x5F0F;&#x63D0;&#x53D6;&#x4FE1;&#x606F;">Jsoup &#x65B9;&#x5F0F;&#x63D0;&#x53D6;&#x4FE1;&#x606F;</h3>
+<p> <a href="https://blog.csdn.net/z694644032/article/details/102363914" target="_blank">&#x5B66;&#x4E60;&#x94FE;&#x63A5;</a></p>
+<p>Jsoup &#x7684;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.jsoup<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jsoup<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.12.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p> &#x5728;&#x5217;&#x8868;&#x9875;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5229;&#x7528; F12 &#x5BA1;&#x67E5;&#x5143;&#x7D20;&#x67E5;&#x770B;&#x9875;&#x9762;&#x7ED3;&#x6784;&#xFF0C;&#x7ECF;&#x8FC7;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x53D1;&#x73B0;&#x5217;&#x8868;&#x65B0;&#x95FB;&#x5728;  <div class="news-list">&#x2018;&#x2019;&#x6807;&#x7B7E;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E00;&#x6761;&#x65B0;&#x95FB;&#x90FD;&#x662F;&#x4E00;&#x4E2A;<code>li</code>&#x6807;&#x7B7E; </div></p>
+<p> &#x7ED3;&#x5408;&#x6D4F;&#x89C8;&#x5668;&#x7684; Copy &#x529F;&#x80FD;&#xFF0C;&#x7F16;&#x5199;&#x51FA;&#x6211;&#x4EEC; <code>a</code>&#x6807;&#x7B7E;&#x7684; css &#x9009;&#x62E9;&#x5668;&#x4EE3;&#x7801;&#xFF1A;<code>div.news-list &gt; ul &gt; li &gt; div.list-hd &gt; h4 &gt; a</code> </p>
+<pre><code class="lang-Java"><span class="hljs-comment">/**
+ * jsoup&#x65B9;&#x5F0F; &#x83B7;&#x53D6;&#x864E;&#x6251;&#x65B0;&#x95FB;&#x5217;&#x8868;&#x9875;
+ * <span class="hljs-doctag">@param</span> url &#x864E;&#x6251;&#x65B0;&#x95FB;&#x5217;&#x8868;&#x9875;url
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">jsoupList</span><span class="hljs-params">(String url)</span></span>{
+    <span class="hljs-keyword">try</span> {
+        Document document = Jsoup.connect(url).get();
+        <span class="hljs-comment">// &#x4F7F;&#x7528; css&#x9009;&#x62E9;&#x5668; &#x63D0;&#x53D6;&#x5217;&#x8868;&#x65B0;&#x95FB; a &#x6807;&#x7B7E;</span>
+        <span class="hljs-comment">// &lt;a href=&quot;https://voice.hupu.com/nba/2484553.html&quot; target=&quot;_blank&quot;&gt;&#x970D;&#x534E;&#x5FB7;&#xFF1A;&#x590F;&#x4F11;&#x671F;&#x5185;&#x66FE;&#x8282;&#x98DF;30&#x5929;&#xFF0C;&#x8FD9;&#x8003;&#x9A8C;&#x4E86;&#x6211;&#x7684;&#x8EAB;&#x5FC3;&lt;/a&gt;</span>
+        Elements elements = document.select(<span class="hljs-string">&quot;div.news-list &gt; ul &gt; li &gt; div.list-hd &gt; h4 &gt; a&quot;</span>);
+        <span class="hljs-keyword">for</span> (Element element:elements){
+<span class="hljs-comment">//                System.out.println(element);</span>
+            <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8BE6;&#x60C5;&#x9875;&#x94FE;&#x63A5;</span>
+            String d_url = element.attr(<span class="hljs-string">&quot;href&quot;</span>);
+            <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6807;&#x9898;</span>
+            String title = element.ownText();
+
+            System.out.println(<span class="hljs-string">&quot;&#x8BE6;&#x60C5;&#x9875;&#x94FE;&#x63A5;&#xFF1A;&quot;</span>+d_url+<span class="hljs-string">&quot; ,&#x8BE6;&#x60C5;&#x9875;&#x6807;&#x9898;&#xFF1A;&quot;</span>+title);
+
+        }
+    } <span class="hljs-keyword">catch</span> (IOException e) {
+        e.printStackTrace();
+    }
+}
+</code></pre>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    String url = <span class="hljs-string">&quot;https://voice.hupu.com/nba&quot;</span>;
+    CrawlerBase crawlerBase = <span class="hljs-keyword">new</span> CrawlerBase();
+    crawlerBase.jsoupList(url);
+}
+</code></pre>
+<h3 id="httpclient--&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">httpclient + &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<blockquote>
+<p> httpclient + &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x6D89;&#x53CA;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#x8FD8;&#x662F;&#x86EE;&#x591A;&#x7684;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3001;Java &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3001;httpclient </p>
+</blockquote>
+<p>&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>httpclient<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.5.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>httpcore<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.4.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>httpmime<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.5.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;&#x80FD;&#x591F;&#x4EE3;&#x8868;&#x5217;&#x8868;&#x65B0;&#x95FB;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<div class="list-hd"> <h4 id="&#x76F4;&#x4E0A;&#x4E91;&#x9704;&#xFF01;&#x9B54;&#x672F;&#x5B98;&#x65B9;&#x793E;&#x5A92;&#x6652;&#x5BCC;&#x5C14;&#x8328;&#x6263;&#x7BEE;&#x70AB;&#x9177;&#x7279;&#x6548;&#x56FE;"> <a href="https://voice.hupu.com/nba/2485508.html" target="_blank">&#x76F4;&#x4E0A;&#x4E91;&#x9704;&#xFF01;&#x9B54;&#x672F;&#x5B98;&#x65B9;&#x793E;&#x5A92;&#x6652;&#x5BCC;&#x5C14;&#x8328;&#x6263;&#x7BEE;&#x70AB;&#x9177;&#x7279;&#x6548;&#x56FE;</a></h4></div>&#x8FD9;&#x6BB5;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x6BCF;&#x4E2A;&#x5217;&#x8868;&#x65B0;&#x95FB;&#x53EA;&#x6709;&#x94FE;&#x63A5;&#x548C;&#x6807;&#x9898;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x800C;&#x4E14; <div class="list-hd">&#x662F;&#x5217;&#x8868;&#x65B0;&#x95FB;&#x7279;&#x6709;&#x7684;&#x3002;</div></p>
+<p>&#x6700;&#x597D;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x6B63;&#x5219;&#x5339;&#x914D; a&#x6807;&#x7B7E;&#xFF0C;&#x56E0;&#x4E3A; a&#x6807;&#x7B7E;&#x5728;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x4E5F;&#x6709;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x8FD8;&#x9700;&#x8981;&#x505A;&#x5176;&#x4ED6;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x589E;&#x52A0;&#x6211;&#x4EEC;&#x7684;&#x96BE;&#x5EA6;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x4E86;&#x6B63;&#x5219;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x8D77;&#x6765;&#x770B;&#x770B; httpclient + &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65B9;&#x5F0F;&#x63D0;&#x53D6;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-Java"><span class="hljs-comment">/**
+ * httpclient + &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; &#x83B7;&#x53D6;&#x864E;&#x6251;&#x65B0;&#x95FB;&#x5217;&#x8868;&#x9875;
+ * <span class="hljs-doctag">@param</span> url &#x864E;&#x6251;&#x65B0;&#x95FB;&#x5217;&#x8868;&#x9875;url
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">httpClientList</span><span class="hljs-params">(String url)</span></span>{
+    <span class="hljs-keyword">try</span> {
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        HttpGet httpGet = <span class="hljs-keyword">new</span> HttpGet(url);
+        CloseableHttpResponse response = httpclient.execute(httpGet);
+        <span class="hljs-keyword">if</span> (response.getStatusLine().getStatusCode() == <span class="hljs-number">200</span>) {
+            HttpEntity entity = response.getEntity();
+            String body = EntityUtils.toString(entity,<span class="hljs-string">&quot;utf-8&quot;</span>);
+
+            <span class="hljs-keyword">if</span> (body!=<span class="hljs-keyword">null</span>) {
+                 <span class="hljs-comment">/*
+                 * &#x66FF;&#x6362;&#x6389;&#x6362;&#x884C;&#x7B26;&#x3001;&#x5236;&#x8868;&#x7B26;&#x3001;&#x56DE;&#x8F66;&#x7B26;&#xFF0C;&#x53BB;&#x6389;&#x8FD9;&#x4E9B;&#x7B26;&#x53F7;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x793A;&#x5199;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x5355;&#x4E00;&#x4E9B;
+                 * &#x53EA;&#x6709;&#x7A7A;&#x683C;&#x7B26;&#x53F7;&#x548C;&#x5176;&#x4ED6;&#x6B63;&#x5E38;&#x5B57;&#x4F53;
+                 */</span>
+                Pattern p = Pattern.compile(<span class="hljs-string">&quot;\t|\r|\n&quot;</span>);
+                Matcher m = p.matcher(body);
+                body = m.replaceAll(<span class="hljs-string">&quot;&quot;</span>);
+                <span class="hljs-comment">/*
+                 * &#x63D0;&#x53D6;&#x5217;&#x8868;&#x9875;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+                 * &#x53BB;&#x9664;&#x6362;&#x884C;&#x7B26;&#x4E4B;&#x540E;&#x7684; li
+                 * &lt;div class=&quot;list-hd&quot;&gt;                                    &lt;h4&gt;                                        &lt;a href=&quot;https://voice.hupu.com/nba/2485167.html&quot;  target=&quot;_blank&quot;&gt;&#x4E0E;&#x7403;&#x8FF7;&#x4EB2;&#x5207;&#x4E92;&#x52A8;&#xFF01;&#x51EF;&#x5C14;&#x7279;&#x4EBA;&#x5B98;&#x65B9;&#x6652;&#x7403;&#x961F;&#x5F00;&#x653E;&#x8BAD;&#x7EC3;&#x65E5;&#x7167;&#x7247;&lt;/a&gt;                                    &lt;/h4&gt;                                &lt;/div&gt;
+                 */</span>
+                Pattern pattern = Pattern
+                        .compile(<span class="hljs-string">&quot;&lt;div class=\&quot;list-hd\&quot;&gt;\\s* &lt;h4&gt;\\s* &lt;a href=\&quot;(.*?)\&quot;\\s* target=\&quot;_blank\&quot;&gt;(.*?)&lt;/a&gt;\\s* &lt;/h4&gt;\\s* &lt;/div&gt;&quot;</span> );
+
+                Matcher matcher = pattern.matcher(body);
+                <span class="hljs-comment">// &#x5339;&#x914D;&#x51FA;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6570;&#x636E;</span>
+                <span class="hljs-keyword">while</span> (matcher.find()){
+<span class="hljs-comment">//                        String info = matcher.group(0);</span>
+<span class="hljs-comment">//                        System.out.println(info);</span>
+                    <span class="hljs-comment">// &#x63D0;&#x53D6;&#x51FA;&#x94FE;&#x63A5;&#x548C;&#x6807;&#x9898;</span>
+                    System.out.println(<span class="hljs-string">&quot;&#x8BE6;&#x60C5;&#x9875;&#x94FE;&#x63A5;&#xFF1A;&quot;</span>+matcher.group(<span class="hljs-number">1</span>)+<span class="hljs-string">&quot; ,&#x8BE6;&#x60C5;&#x9875;&#x6807;&#x9898;&#xFF1A;&quot;</span>+matcher.group(<span class="hljs-number">2</span>));
+                }
+            }<span class="hljs-keyword">else</span> {
+                System.out.println(<span class="hljs-string">&quot;&#x5904;&#x7406;&#x5931;&#x8D25;&#xFF01;&#xFF01;&#xFF01;&#x83B7;&#x53D6;&#x6B63;&#x6587;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&quot;</span>);
+            }
+        } <span class="hljs-keyword">else</span> {
+            System.out.println(<span class="hljs-string">&quot;&#x5904;&#x7406;&#x5931;&#x8D25;&#xFF01;&#xFF01;&#xFF01;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;&#xFF1A;&quot;</span> + response.getStatusLine().getStatusCode());
+        }
+    }<span class="hljs-keyword">catch</span> (Exception e){
+        e.printStackTrace();
+    }
+
+}
+</code></pre>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    String url = <span class="hljs-string">&quot;https://voice.hupu.com/nba&quot;</span>;
+    CrawlerBase crawlerBase = <span class="hljs-keyword">new</span> CrawlerBase();
+<span class="hljs-comment">//        crawlerBase.jsoupList(url);</span>
+    crawlerBase.httpClientList(url);
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java多线程并发.html" class="navigation navigation-prev " aria-label="Previous page: Java多线程并发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Java集合.html" class="navigation navigation-next " aria-label="Next page: Java集合">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java爬虫","level":"1.8.7","depth":2,"next":{"title":"Java集合","level":"1.8.8","depth":2,"path":"学习java/Java集合.md","ref":"学习java/Java集合.md","articles":[]},"previous":{"title":"Java多线程并发","level":"1.8.6","depth":2,"path":"学习java/Java多线程并发.md","ref":"学习java/Java多线程并发.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/Java爬虫.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

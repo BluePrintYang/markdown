@@ -1,0 +1,1300 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaByteCode · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Java基础.html" />
+    
+    
+    <link rel="prev" href="HashMap的简单实现.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >JavaByteCode</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="java&#x5B57;&#x8282;&#x7801;">Java&#x5B57;&#x8282;&#x7801;</h2>
+<p>&#x6E90;&#x7A0B;&#x5E8F;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Factorial</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(factorial(<span class="hljs-number">5</span>));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">factorial</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">if</span> (n &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> n * factorial(n - <span class="hljs-number">1</span>);
+    }
+}
+</code></pre>
+<p>&#x7F16;&#x8BD1;&#x4E3A;.class&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x547D;&#x4EE4;<code>javap -v</code>&#x67E5;&#x770B;&#x5B57;&#x8282;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code>Classfile /D:/program/Factorial.class
+  Last modified 2020-6-16; size 503 bytes
+  MD5 checksum 653d943bd262083f1a678567935cda55
+  Compiled from &quot;Factorial.java&quot;
+public class Factorial
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#18         // java/lang/Object.&quot;&lt;init&gt;&quot;:()V
+   #2 = Fieldref           #19.#20        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Methodref          #5.#21         // Factorial.factorial:(I)I
+   #4 = Methodref          #22.#23        // java/io/PrintStream.println:(I)V
+   #5 = Class              #24            // Factorial
+   #6 = Class              #25            // java/lang/Object
+   #7 = Utf8               &lt;init&gt;
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               factorial
+  #14 = Utf8               (I)I
+  #15 = Utf8               StackMapTable
+  #16 = Utf8               SourceFile
+  #17 = Utf8               Factorial.java
+  #18 = NameAndType        #7:#8          // &quot;&lt;init&gt;&quot;:()V
+  #19 = Class              #26            // java/lang/System
+  #20 = NameAndType        #27:#28        // out:Ljava/io/PrintStream;
+  #21 = NameAndType        #13:#14        // factorial:(I)I
+  #22 = Class              #29            // java/io/PrintStream
+  #23 = NameAndType        #30:#31        // println:(I)V
+  #24 = Utf8               Factorial
+  #25 = Utf8               java/lang/Object
+  #26 = Utf8               java/lang/System
+  #27 = Utf8               out
+  #28 = Utf8               Ljava/io/PrintStream;
+  #29 = Utf8               java/io/PrintStream
+  #30 = Utf8               println
+  #31 = Utf8               (I)V
+{
+  public Factorial();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object.&quot;&lt;init&gt;&quot;:()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iconst_5
+         4: invokestatic  #3                  // Method factorial:(I)I
+         7: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
+        10: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 10
+
+  public static int factorial(int);
+    descriptor: (I)I
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: iload_0
+         1: iconst_2
+         2: if_icmpge     7
+         5: iconst_1
+         6: ireturn
+         7: iload_0
+         8: iload_0
+         9: iconst_1
+        10: isub
+        11: invokestatic  #3                  // Method factorial:(I)I
+        14: imul
+        15: ireturn
+      LineNumberTable:
+        line 10: 0
+        line 11: 7
+      StackMapTable: number_of_entries = 1
+        frame_type = 7 /* same */
+}
+SourceFile: &quot;Factorial.java&quot;
+</code></pre><h3 id="&#x4E00;&#x4E9B;&#x6307;&#x4EE4;&#x8BF4;&#x660E;">&#x4E00;&#x4E9B;&#x6307;&#x4EE4;&#x8BF4;&#x660E;</h3>
+<blockquote>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings" target="_blank">https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Mnemonic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aload_0</td>
+<td>load a reference onto the stack from local variable 0</td>
+</tr>
+<tr>
+<td>invokespecial #1</td>
+<td>invoke instance method on object <em>objectref</em> and puts the result on the stack (might be void); the method is identified by method reference <em>index</em> in constant pool (indexbyte1 &lt;&lt; 8 + indexbyte2)</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HashMap的简单实现.html" class="navigation navigation-prev " aria-label="Previous page: HashMap的简单实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Java基础.html" class="navigation navigation-next " aria-label="Next page: Java基础">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaByteCode","level":"1.8.3","depth":2,"next":{"title":"Java基础","level":"1.8.4","depth":2,"path":"学习java/Java基础.md","ref":"学习java/Java基础.md","articles":[]},"previous":{"title":"HashMap的简单实现","level":"1.8.2","depth":2,"path":"学习java/HashMap的简单实现.md","ref":"学习java/HashMap的简单实现.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/JavaByteCode.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1378 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Socket · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="一些Java方法.html" />
+    
+    
+    <link rel="prev" href="noifelse.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Socket</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4E0E;&#x7F51;&#x7EDC;&#x8C03;&#x8BD5;&#x52A9;&#x624B;&#x901A;&#x4FE1;</p>
+<p>&#x95EE;&#x9898;1&#xFF1A;&#x7F51;&#x7EDC;&#x8C03;&#x8BD5;&#x52A9;&#x624B;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x672A;&#x6536;&#x5230;</p>
+<p>&#x539F;&#x56E0;&#xFF1A;readLine&#xFF08;&#xFF09;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x672C;&#x8EAB;&#x6709;&#x4E00;&#x4E2A;&#x6CE8;&#x610F;&#x70B9;&#xFF0C;&#x5B83;&#x8BFB;&#x53D6;&#x7684;&#x662F;&#x4E00;&#x6574;&#x884C;&#xFF0C;&#x9047;&#x89C1;&#x2018;\n&#x2019;&#x6216; &#x2018; \r&#x2019; &#x4EE3;&#x8868;&#x8BFB;&#x53D6;&#x7ED3;&#x675F;&#x3002;&#x56E0;&#x4E3A;&#x7528;&#x7684;&#x662F;&#x7F51;&#x7EDC;&#x52A9;&#x624B;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF; &#xFF0C;&#x6BCF;&#x6B21;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x65F6;&#x5E76;&#x4E0D;&#x4F1A;&#x6DFB;&#x52A0;&#x2018;\n&#x2019;&#xFF0C;&#x800C;&#x7528;&#x63A7;&#x5236;&#x53F0;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x65F6;&#xFF0C;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x4E86;&#x2018;\n&#x2019;&#xFF0C;&#x6240;&#x4EE5;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8FDB;&#x884C;&#x63A5;&#x6536;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x662F;&#x5B9E;&#x65F6;&#x663E;&#x793A;&#x7684;&#x3002;</p>
+<p>&#x4E92;&#x76F8;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#xFF0C;&#x4E92;&#x76F8;&#x63A5;&#x6536;&#xFF0C;&#x6BCF;&#x6B21;&#x4E00;&#x6761;</p>
+<p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">import</span> java.io.BufferedReader;
+<span class="hljs-keyword">import</span> java.io.InputStreamReader;
+<span class="hljs-keyword">import</span> java.io.PrintWriter;
+<span class="hljs-keyword">import</span> java.net.ServerSocket;
+<span class="hljs-keyword">import</span> java.net.Socket;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SocketServer</span> </span>{
+    <span class="hljs-comment">//&#x642D;&#x5EFA;&#x670D;&#x52A1;&#x5668;&#x7AEF;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//1&#x3001;a)&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7AEF;Socket&#xFF0C;&#x5373;SocketService</span>
+        SocketServer socketService = <span class="hljs-keyword">new</span> SocketServer();
+        socketService.oneServer();
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">oneServer</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">try</span>{
+            ServerSocket server=<span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">try</span>{
+                <span class="hljs-comment">//&#x4E0B;&#x9762;&#x662F;&#x7AEF;&#x53E3;&#xFF0C;&#x7AEF;&#x53E3;&#x53EF;&#x4EE5;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x91CC;&#x9762;&#x7684;&#x7AEF;&#x53E3;&#x4E00;&#x6837;</span>
+                server=<span class="hljs-keyword">new</span> ServerSocket(<span class="hljs-number">5209</span>);
+                <span class="hljs-comment">//b)&#x6307;&#x5B9A;&#x7ED1;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x5E76;&#x76D1;&#x542C;&#x6B64;&#x7AEF;&#x53E3;&#x3002;</span>
+                System.out.println(<span class="hljs-string">&quot;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x6210;&#x529F;&quot;</span>);
+                <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;ServerSocket&#x5728;&#x7AEF;&#x53E3;5209&#x76D1;&#x542C;&#x5BA2;&#x6237;&#x8BF7;&#x6C42;</span>
+            }<span class="hljs-keyword">catch</span>(Exception e) {
+                System.out.println(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x542F;&#x52A8;&#x76D1;&#x542C;&#xFF1A;&quot;</span>+e);
+                <span class="hljs-comment">//&#x51FA;&#x9519;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x9519;&#x4FE1;&#x606F;</span>
+            }
+            Socket socket=<span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">try</span>{
+                socket=server.accept();
+                <span class="hljs-comment">//2&#x3001;&#x8C03;&#x7528;accept()&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#xFF0C;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8FDE;&#x63A5; </span>
+                <span class="hljs-comment">//&#x4F7F;&#x7528;accept()&#x963B;&#x585E;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x6709;&#x5BA2;&#x6237;</span>
+                <span class="hljs-comment">//&#x8BF7;&#x6C42;&#x5230;&#x6765;&#x5219;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;Socket&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x6267;&#x884C;</span>
+            }<span class="hljs-keyword">catch</span>(Exception e) {
+                System.out.println(<span class="hljs-string">&quot;Error.&quot;</span>+e);
+                <span class="hljs-comment">//&#x51FA;&#x9519;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x9519;&#x4FE1;&#x606F;</span>
+            }
+            <span class="hljs-comment">//3&#x3001;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x5E76;&#x8BFB;&#x53D6;&#x5BA2;&#x6237;&#x7AEF;&#x4FE1;&#x606F; </span>
+            String line;
+            BufferedReader in=<span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(socket.getInputStream()));
+            <span class="hljs-comment">//&#x7531;Socket&#x5BF9;&#x8C61;&#x5F97;&#x5230;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x5E76;&#x6784;&#x9020;&#x76F8;&#x5E94;&#x7684;BufferedReader&#x5BF9;&#x8C61;</span>
+            PrintWriter writer=<span class="hljs-keyword">new</span> PrintWriter(socket.getOutputStream());
+            <span class="hljs-comment">//&#x7531;Socket&#x5BF9;&#x8C61;&#x5F97;&#x5230;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x5E76;&#x6784;&#x9020;PrintWriter&#x5BF9;&#x8C61;</span>
+            BufferedReader br=<span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(System.in));
+            <span class="hljs-comment">//&#x7531;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#x6784;&#x9020;BufferedReader&#x5BF9;&#x8C61;</span>
+            System.out.println(<span class="hljs-string">&quot;Client:&quot;</span>+in.readLine());
+            <span class="hljs-comment">//&#x5728;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E0A;&#x6253;&#x5370;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x8BFB;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+            line=br.readLine();
+            <span class="hljs-comment">//&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</span>
+            <span class="hljs-comment">//4&#x3001;&#x83B7;&#x53D6;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x54CD;&#x5E94;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42; </span>
+            <span class="hljs-keyword">while</span>(!line.equals(<span class="hljs-string">&quot;end&quot;</span>)){
+                <span class="hljs-comment">//&#x5982;&#x679C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x4E3A; &quot;bye&quot;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x5FAA;&#x73AF;</span>
+                writer.println(line);
+                <span class="hljs-comment">//&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x8F93;&#x51FA;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;</span>
+                writer.flush();
+                <span class="hljs-comment">//&#x5237;&#x65B0;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x4F7F;Client&#x9A6C;&#x4E0A;&#x6536;&#x5230;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;</span>
+                System.out.println(<span class="hljs-string">&quot;&#x670D;&#x52A1;:&quot;</span>+line);
+                <span class="hljs-comment">//&#x5728;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E0A;&#x6253;&#x5370;&#x8BFB;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+                System.out.println(<span class="hljs-string">&quot;&#x5BA2;&#x6237;:&quot;</span>+in.readLine());
+                <span class="hljs-comment">//&#x4ECE;Client&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E0A;</span>
+                line=br.readLine();
+                <span class="hljs-comment">//&#x4ECE;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</span>
+            } <span class="hljs-comment">//&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;</span>
+
+            <span class="hljs-comment">//5&#x3001;&#x5173;&#x95ED;&#x8D44;&#x6E90; </span>
+            writer.close(); <span class="hljs-comment">//&#x5173;&#x95ED;Socket&#x8F93;&#x51FA;&#x6D41;</span>
+            in.close(); <span class="hljs-comment">//&#x5173;&#x95ED;Socket&#x8F93;&#x5165;&#x6D41;</span>
+            socket.close(); <span class="hljs-comment">//&#x5173;&#x95ED;Socket</span>
+            server.close(); <span class="hljs-comment">//&#x5173;&#x95ED;ServerSocket</span>
+        }<span class="hljs-keyword">catch</span>(Exception e) {<span class="hljs-comment">//&#x51FA;&#x9519;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x9519;&#x4FE1;&#x606F;</span>
+            System.out.println(<span class="hljs-string">&quot;Error.&quot;</span>+e);
+        }
+    }
+}
+</code></pre>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">import</span> java.io.BufferedReader;
+<span class="hljs-keyword">import</span> java.io.InputStreamReader;
+<span class="hljs-keyword">import</span> java.io.PrintWriter;
+<span class="hljs-keyword">import</span> java.net.Socket;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SocketClient</span> </span>{
+    <span class="hljs-comment">// &#x642D;&#x5EFA;&#x5BA2;&#x6237;&#x7AEF;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">// 1&#x3001;&#x521B;&#x5EFA;&#x5BA2;&#x6237;&#x7AEF;Socket&#xFF0C;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;</span>
+
+            <span class="hljs-comment">//&#x4E0B;&#x9762;&#x662F;&#x4F60;&#x8981;&#x4F20;&#x8F93;&#x5230;&#x53E6;&#x4E00;&#x53F0;&#x7535;&#x8111;&#x7684;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;</span>
+            Socket socket = <span class="hljs-keyword">new</span> Socket(<span class="hljs-string">&quot;127.0.0.1&quot;</span>, <span class="hljs-number">5209</span>);
+            System.out.println(<span class="hljs-string">&quot;&#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x6210;&#x529F;&quot;</span>);
+            <span class="hljs-comment">// 2&#x3001;&#x83B7;&#x53D6;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x5411;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x9001;&#x4FE1;&#x606F;</span>
+            <span class="hljs-comment">// &#x5411;&#x672C;&#x673A;&#x7684;52000&#x7AEF;&#x53E3;&#x53D1;&#x51FA;&#x5BA2;&#x6237;&#x8BF7;&#x6C42;</span>
+            BufferedReader br = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(System.in));
+            <span class="hljs-comment">// &#x7531;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#x6784;&#x9020;BufferedReader&#x5BF9;&#x8C61;</span>
+            PrintWriter write = <span class="hljs-keyword">new</span> PrintWriter(socket.getOutputStream());
+            <span class="hljs-comment">// &#x7531;Socket&#x5BF9;&#x8C61;&#x5F97;&#x5230;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x5E76;&#x6784;&#x9020;PrintWriter&#x5BF9;&#x8C61;</span>
+            <span class="hljs-comment">//3&#x3001;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x5E76;&#x8BFB;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;&#x54CD;&#x5E94;&#x4FE1;&#x606F; </span>
+            BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(socket.getInputStream()));
+            <span class="hljs-comment">// &#x7531;Socket&#x5BF9;&#x8C61;&#x5F97;&#x5230;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x5E76;&#x6784;&#x9020;&#x76F8;&#x5E94;&#x7684;BufferedReader&#x5BF9;&#x8C61;</span>
+            String readline;
+            readline = br.readLine(); <span class="hljs-comment">// &#x4ECE;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</span>
+            <span class="hljs-keyword">while</span> (!readline.equals(<span class="hljs-string">&quot;end&quot;</span>)) {
+                <span class="hljs-comment">// &#x82E5;&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E3A; &quot;end&quot;&#x5219;&#x505C;&#x6B62;&#x5FAA;&#x73AF;</span>
+                write.println(readline);
+                <span class="hljs-comment">// &#x5C06;&#x4ECE;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F93;&#x51FA;&#x5230;Server</span>
+                write.flush();
+                <span class="hljs-comment">// &#x5237;&#x65B0;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;&#x4F7F;Server&#x9A6C;&#x4E0A;&#x6536;&#x5230;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;</span>
+                System.out.println(<span class="hljs-string">&quot;&#x5BA2;&#x6237;:&quot;</span> + readline);
+                <span class="hljs-comment">// &#x5728;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E0A;&#x6253;&#x5370;&#x8BFB;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+                System.out.println(<span class="hljs-string">&quot;&#x670D;&#x52A1;:&quot;</span> + in.readLine());
+                <span class="hljs-comment">// &#x4ECE;Server&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x4E0A;</span>
+                readline = br.readLine(); <span class="hljs-comment">// &#x4ECE;&#x7CFB;&#x7EDF;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x5165;&#x4E00;&#x5B57;&#x7B26;&#x4E32;</span>
+            } <span class="hljs-comment">// &#x7EE7;&#x7EED;&#x5FAA;&#x73AF;</span>
+            <span class="hljs-comment">//4&#x3001;&#x5173;&#x95ED;&#x8D44;&#x6E90; </span>
+            write.close(); <span class="hljs-comment">// &#x5173;&#x95ED;Socket&#x8F93;&#x51FA;&#x6D41;</span>
+            in.close(); <span class="hljs-comment">// &#x5173;&#x95ED;Socket&#x8F93;&#x5165;&#x6D41;</span>
+            socket.close(); <span class="hljs-comment">// &#x5173;&#x95ED;Socket</span>
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            System.out.println(<span class="hljs-string">&quot;can not listen to:&quot;</span> + e);<span class="hljs-comment">// &#x51FA;&#x9519;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x9519;&#x4FE1;&#x606F;</span>
+        }
+    }
+
+}
+</code></pre>
+<p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6301;&#x7EED;&#x63A5;&#x6536;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5BA2;&#x6237;&#x7AEF;&#x4EE5;&#x53CA;&#x5199;&#x597D;&#x7684;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">import</span> java.io.BufferedReader;
+<span class="hljs-keyword">import</span> java.io.BufferedWriter;
+<span class="hljs-keyword">import</span> java.io.IOException;
+<span class="hljs-keyword">import</span> java.io.InputStreamReader;
+<span class="hljs-keyword">import</span> java.io.OutputStreamWriter;
+<span class="hljs-keyword">import</span> java.net.ServerSocket;
+<span class="hljs-keyword">import</span> java.net.Socket;
+<span class="hljs-keyword">import</span> java.util.Date;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SocketServerContinue</span> </span>{
+
+    <span class="hljs-keyword">private</span> BufferedWriter writer;
+
+    <span class="hljs-keyword">private</span> BufferedReader reader;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        SocketServerContinue socketServer = <span class="hljs-keyword">new</span> SocketServerContinue();
+        socketServer.startServer();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">startServer</span><span class="hljs-params">()</span> </span>{
+        ServerSocket serverSocket = <span class="hljs-keyword">null</span>;
+        Socket socket = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">// &#x7AEF;&#x53E3;&#x53F7;&#x53EA;&#x8981;&#x4E0D;&#x51B2;&#x7A81;&#x5C31;&#x884C;</span>
+            serverSocket = <span class="hljs-keyword">new</span> ServerSocket(<span class="hljs-number">9898</span>);
+            System.out.println(<span class="hljs-string">&quot;server started..&quot;</span>);
+            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+                <span class="hljs-comment">// &#x8FDB;&#x5165;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x5165;</span>
+                socket = serverSocket.accept();
+                manageConnection(socket);
+            }
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+        } <span class="hljs-keyword">finally</span> {
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">assert</span> socket != <span class="hljs-keyword">null</span>;
+                socket.close();
+                serverSocket.close();
+            } <span class="hljs-keyword">catch</span> (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">manageConnection</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Socket socket)</span> </span>{
+        <span class="hljs-keyword">new</span> Thread(() -&gt; {
+            <span class="hljs-keyword">try</span> {
+                System.out.println(<span class="hljs-string">&quot;client &quot;</span> + socket.hashCode() + <span class="hljs-string">&quot; connected&quot;</span>);
+                <span class="hljs-comment">// &#x4ECE;socket&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+                reader = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(socket.getInputStream()));
+                writer = <span class="hljs-keyword">new</span> BufferedWriter(<span class="hljs-keyword">new</span> OutputStreamWriter(socket.getOutputStream()));
+                String receiveMsg;
+                <span class="hljs-keyword">while</span> ((receiveMsg = reader.readLine()) != <span class="hljs-keyword">null</span>) { <span class="hljs-comment">// &#x4EE5;&quot;\n&quot;&#x7ED3;&#x675F;</span>
+                    System.out.println(<span class="hljs-string">&quot;client &quot;</span> + socket.hashCode() + <span class="hljs-string">&quot;:&quot;</span> + receiveMsg);
+                    Person person = <span class="hljs-keyword">new</span> Person();
+                    person.setBirthday(<span class="hljs-keyword">new</span> Date());
+                    person.setClassId(<span class="hljs-string">&quot;B170404&quot;</span>);
+                    person.setId(<span class="hljs-string">&quot;B17040417&quot;</span>);
+                    person.setName(<span class="hljs-string">&quot;yll&quot;</span>);
+                    writer.write(<span class="hljs-string">&quot;server reply:&quot;</span> + person.toString() + <span class="hljs-string">&quot;\n&quot;</span>);
+                    writer.flush();
+                }
+            } <span class="hljs-keyword">catch</span> (IOException e) {
+                e.printStackTrace();
+            } <span class="hljs-keyword">finally</span> {
+                <span class="hljs-keyword">try</span> {
+                    reader.close();
+                    writer.close();
+                } <span class="hljs-keyword">catch</span> (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="noifelse.html" class="navigation navigation-prev " aria-label="Previous page: Noifelse">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="一些Java方法.html" class="navigation navigation-next " aria-label="Next page: 一些Java方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Socket","level":"1.8.12","depth":2,"next":{"title":"一些Java方法","level":"1.8.13","depth":2,"path":"学习java/一些Java方法.md","ref":"学习java/一些Java方法.md","articles":[]},"previous":{"title":"Noifelse","level":"1.8.11","depth":2,"path":"学习java/noifelse.md","ref":"学习java/noifelse.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/socket.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

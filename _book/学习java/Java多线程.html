@@ -1,0 +1,1516 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java多线程 · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Java多线程并发.html" />
+    
+    
+    <link rel="prev" href="Java基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Java多线程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x7EBF;&#x7A0B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;">&#x7EBF;&#x7A0B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<h4 id="&#x65B0;&#x5EFA;&#x72B6;&#x6001;">&#x65B0;&#x5EFA;&#x72B6;&#x6001;</h4>
+<p>&#x4F7F;&#x7528;new&#x5173;&#x952E;&#x8BCD;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x540E;&#xFF0C;&#x5904;&#x4E8E;&#x65B0;&#x5EFA;&#x72B6;&#x6001;&#xFF0C;&#x4EC5;&#x7531;JVM&#x4E3A;&#x5176;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5176;&#x6210;&#x5458;&#x53D8;&#x91CF;</p>
+<h4 id="&#x5C31;&#x7EEA;&#x72B6;&#x6001;">&#x5C31;&#x7EEA;&#x72B6;&#x6001;</h4>
+<p>&#x7EBF;&#x7A0B;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x4E86;start()&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x3002;Java&#x865A;&#x62DF;&#x673A;&#x4F1A;&#x4E3A;&#x5176;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x6808;&#x548C;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x7B49;&#x5F85;&#x8C03;&#x5EA6;&#x8FD0;&#x884C;</p>
+<h4 id="&#x8FD0;&#x884C;&#x72B6;&#x6001;">&#x8FD0;&#x884C;&#x72B6;&#x6001;</h4>
+<p>&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x7684;&#x7EBF;&#x7A0B;&#x83B7;&#x5F97;&#x4E86;cpu&#xFF0C;&#x5F00;&#x59CB;&#x6267;&#x884C;run()&#x65B9;&#x6CD5;&#x7684;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4F53;</p>
+<h4 id="&#x963B;&#x585E;&#x72B6;&#x6001;">&#x963B;&#x585E;&#x72B6;&#x6001;</h4>
+<p>&#x7531;&#x4E8E;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x653E;&#x5F03;&#x4E86;cpu&#x4F7F;&#x7528;&#x6743;</p>
+<p>&#x5206;&#x4E09;&#x79CD;&#x60C5;&#x51B5;</p>
+<ul>
+<li>&#x7B49;&#x5F85;&#x963B;&#x585E;&#xFF1A;&#x6267;&#x884C;wait()&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x961F;&#x5217;</li>
+<li>&#x540C;&#x6B65;&#x963B;&#x585E;&#xFF1A;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x540C;&#x6B65;&#x9501;&#x65F6;&#xFF0C;&#x540C;&#x6B65;&#x9501;&#x88AB;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x5360;&#x7528;&#xFF0C;JVM&#x4F1A;&#x628A;&#x8BE5;&#x7EBF;&#x7A0B;&#x653E;&#x5165;&#x9501;&#x6C60;&#x4E2D;</li>
+<li>&#x5176;&#x4ED6;&#x963B;&#x585E;&#xFF1A;&#x6267;&#x884C;Thread.sleep(long ms)&#x6216;t.join()&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x53D1;&#x51FA;&#x4E86;I/O&#x8BF7;&#x6C42;</li>
+</ul>
+<h4 id="&#x7EBF;&#x7A0B;&#x6B7B;&#x4EA1;">&#x7EBF;&#x7A0B;&#x6B7B;&#x4EA1;</h4>
+<p>&#x7EBF;&#x7A0B;&#x4F1A;&#x4EE5;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x7ED3;&#x675F;&#xFF0C;&#x7ED3;&#x675F;&#x540E;&#x5C31;&#x662F;&#x6B7B;&#x4EA1;&#x72B6;&#x6001;</p>
+<ul>
+<li>&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#xFF1A;run()&#x6216;call()&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6210;</li>
+<li>&#x5F02;&#x5E38;&#x7ED3;&#x675F;&#xFF1A;&#x7EBF;&#x7A0B;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x672A;&#x6355;&#x83B7;&#x7684;Exception&#x6216;Error</li>
+<li>&#x8C03;&#x7528;stop&#xFF1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#x7684;stop()&#x65B9;&#x6CD5;&#x6765;&#x7ED3;&#x675F;&#x6539;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x6B7B;&#x9501;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;</li>
+</ul>
+<p><img src="https://www.yangllong.top/PicHub/image-20200420150209648.png" alt="image-20200420150209648"></p>
+<h3 id="&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;">&#x7EBF;&#x7A0B;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;</h3>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ThreadTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-comment">//1.&#x7EE7;&#x627F;Thread&#x7C7B;</span>
+        Thread1 thread = <span class="hljs-keyword">new</span> Thread1();
+        thread.start();
+
+        <span class="hljs-comment">//2.&#x5B9E;&#x73B0;Runnable&#x63A5;&#x53E3;</span>
+        Runnable r = () -&gt; {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+                System.out.println(<span class="hljs-string">&quot;&#x5B50;&#x7EBF;&#x7A0B;2&#x7684;run&#x65B9;&#x6CD5;&quot;</span> + i);
+            }
+        };
+
+        <span class="hljs-comment">//&#x5B9E;&#x4F8B;&#x5316;&#x7EBF;&#x7A0B;</span>
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r);
+        t2.start();
+
+        System.out.println(<span class="hljs-string">&quot;&#x4E3B;&#x7EBF;&#x7A0B;&#x542F;&#x52A8;&#x4E86;&quot;</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Thread1</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Thread</span> </span>{
+    <span class="hljs-comment">//&#x91CD;&#x5199;run&#x65B9;&#x6CD5;</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+            System.out.println(<span class="hljs-string">&quot;&#x5B50;&#x7EBF;&#x7A0B;1&#x7684;run&#x65B9;&#x6CD5;&quot;</span> + i);
+        }
+    }
+}
+</code></pre>
+<h3 id="&#x7EBF;&#x7A0B;&#x5E38;&#x7528;&#x65B9;&#x6CD5;">&#x7EBF;&#x7A0B;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h3>
+<h4 id="&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x5148;&#x7EA7;">&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x5148;&#x7EA7;</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">threadPriority</span><span class="hljs-params">()</span> </span>{
+
+        <span class="hljs-comment">//&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x7EBF;&#x7A0B;&#x62A2;&#x5230;cpu&#x65F6;&#x95F4;&#x7247;&#x7684;&#x6982;&#x7387;</span>
+        <span class="hljs-comment">//&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x5C31;&#x80FD;&#x62A2;&#x5230;</span>
+        <span class="hljs-comment">//&#x4F18;&#x5148;&#x7EA7;&#x662F;&#x4E2A;&#x6574;&#x6570; [1,10] &#x9ED8;&#x8BA4;5 &#xFF0C;&#x6700;&#x9AD8;10</span>
+        Runnable r = () -&gt; {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+                System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;:&quot;</span> + i);
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread2&quot;</span>);
+
+
+        <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x4F18;&#x5148;&#x7EA7;,&#x5FC5;&#x987B;&#x5728;start&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;</span>
+        t1.setPriority(<span class="hljs-number">10</span>);
+        t2.setPriority(<span class="hljs-number">1</span>);
+
+        t1.start();
+        t2.start();
+    }
+</code></pre>
+<h4 id="&#x7EBF;&#x7A0B;&#x7684;&#x793C;&#x8BA9;">&#x7EBF;&#x7A0B;&#x7684;&#x793C;&#x8BA9;</h4>
+<pre><code class="lang-Java"><span class="hljs-comment">/**
+* &#x7EBF;&#x7A0B;&#x7684;&#x793C;&#x8BA9;
+* &#x653E;&#x5F03;cpu&#x65F6;&#x95F4;&#x7247;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x62A2;&#x593A;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x8FD8;&#x662F;&#x62A2;&#x5230;
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">threadYield</span><span class="hljs-params">()</span></span>{
+        Runnable r = () -&gt;{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+                System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;:&quot;</span>+i);
+                <span class="hljs-keyword">if</span> (i==<span class="hljs-number">3</span>)Thread.yield();
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread2&quot;</span>);
+
+        t1.start();
+        t2.start();
+    }
+</code></pre>
+<h3 id="&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;">&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;</h3>
+<h4 id="&#x591A;&#x7EBF;&#x7A0B;&#x5356;&#x7968;&#x7A0B;&#x5E8F;">&#x591A;&#x7EBF;&#x7A0B;&#x5356;&#x7968;&#x7A0B;&#x5E8F;</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SourceConflict</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r = () -&gt;{
+            <span class="hljs-keyword">while</span> (TicketCenter.restTicket&gt;<span class="hljs-number">0</span>){
+                System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;&quot;</span>+--TicketCenter.restTicket+<span class="hljs-string">&quot;&#x5F20;&#x7968;&quot;</span>);
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread2&quot;</span>);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread3&quot;</span>);
+        Thread t4 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread4&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TicketCenter</span></span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> restTicket=<span class="hljs-number">100</span>;
+}
+<span class="hljs-comment">//&#x8FD0;&#x884C;&#x7ED3;&#x679C; &#x6BCF;&#x6B21;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4E0D;&#x540C;</span>
+<span class="hljs-comment">//Thread4&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;98&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread1&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;97&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread3&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;99&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;99&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread3&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;94&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread3&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;92&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread1&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;95&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread4&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;96&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread4&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;89&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//&#x2026;&#x2026;</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5F97;&#x5230;&#x7684;&#xFF0C;&#x662F;&#x7531;&#x4E8E;&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;&#x65F6;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x5BFC;&#x81F4;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;</p>
+<h4 id="&#x6539;&#x8FDB;&#x65B9;&#x6CD5;1-&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x6BB5;">&#x6539;&#x8FDB;&#x65B9;&#x6CD5;1 &#x4F7F;&#x7528;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x6BB5;</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SynchronizeDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r = () -&gt;{
+                <span class="hljs-keyword">while</span> (TicketCenter.restTicket&gt;<span class="hljs-number">0</span>){
+                    <span class="hljs-comment">//&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x6BB5;</span>
+                    <span class="hljs-comment">//synchronized&#x5C0F;&#x62EC;&#x53F7;&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x662F;&#x5BF9;&#x8C61;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;</span>
+                    <span class="hljs-comment">//&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x6240;&#x4EE5;&#x7EBF;&#x7A0B;&#x770B;&#x5230;&#x7684;&#x9501;&#x662F;&#x540C;&#x4E00;&#x4E2A;</span>
+                    <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;&quot;</span>){
+                        <span class="hljs-keyword">if</span> (TicketCenter.restTicket&lt;=<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span>;
+                        System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;&quot;</span>+--TicketCenter.restTicket+<span class="hljs-string">&quot;&#x5F20;&#x7968;&quot;</span>);
+                }
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread2&quot;</span>);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread3&quot;</span>);
+        Thread t4 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread4&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+    }
+}
+<span class="hljs-comment">//&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">//Thread1&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;99&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread1&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;98&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;97&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;96&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//&#x2026;&#x2026;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;2&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;1&#x5F20;&#x7968;</span>
+<span class="hljs-comment">//Thread2&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;0&#x5F20;&#x7968;</span>
+</code></pre>
+<h4 id="&#x6539;&#x8FDB;&#x65B9;&#x6CD5;2-&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x65B9;&#x6CD5;">&#x6539;&#x8FDB;&#x65B9;&#x6CD5;2 &#x4F7F;&#x7528;&#x540C;&#x6B65;&#x65B9;&#x6CD5;</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SynchronizeFunction</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r = SynchronizeFunction::sellTicket;
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread2&quot;</span>);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread3&quot;</span>);
+        Thread t4 = <span class="hljs-keyword">new</span> Thread(r,<span class="hljs-string">&quot;Thread4&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+    }
+
+    <span class="hljs-comment">/**
+     * &#x65B9;&#x6CD5;&#x4E3A;&#x9759;&#x6001;&#xFF0C;&#x5219;&#x540C;&#x6B65;&#x9501;&#x4E3A;&#x7C7B;.class
+     * &#x975E;&#x9759;&#x6001;&#xFF0C;&#x540C;&#x6B65;&#x9501;&#x4E3A;this
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sellTicket</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">while</span> (TicketCenter.restTicket&gt;<span class="hljs-number">0</span>){
+            System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;&quot;</span>+--TicketCenter.restTicket+<span class="hljs-string">&quot;&#x5F20;&#x7968;&quot;</span>);
+        }
+    }
+}
+<span class="hljs-comment">//&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x540C;&#x4E0A;</span>
+</code></pre>
+<h4 id="&#x6539;&#x8FDB;&#x65B9;&#x6CD5;3-&#x4F7F;&#x7528;&#x663E;&#x5F0F;&#x9501;">&#x6539;&#x8FDB;&#x65B9;&#x6CD5;3 &#x4F7F;&#x7528;&#x663E;&#x5F0F;&#x9501;</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LockDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        <span class="hljs-comment">//&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x9501;&#x5BF9;&#x8C61;</span>
+        ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();
+
+        Runnable r = () -&gt; {
+            <span class="hljs-keyword">while</span> (TicketCenter.restTicket &gt; <span class="hljs-number">0</span>) {
+                lock.lock();
+                <span class="hljs-keyword">if</span> (TicketCenter.restTicket &lt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+                System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;&#x5356;&#x51FA;&#x4E00;&#x5F20;&#x7968;&#xFF0C;&#x5269;&#x4F59;&quot;</span> + --TicketCenter.restTicket + <span class="hljs-string">&quot;&#x5F20;&#x7968;&quot;</span>);
+                lock.unlock();
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread1&quot;</span>);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread2&quot;</span>);
+        Thread t3 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread3&quot;</span>);
+        Thread t4 = <span class="hljs-keyword">new</span> Thread(r, <span class="hljs-string">&quot;Thread4&quot;</span>);
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+    }
+}
+<span class="hljs-comment">//&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x540C;&#x4E0A;</span>
+</code></pre>
+<h3 id="&#x6B7B;&#x9501;">&#x6B7B;&#x9501;</h3>
+<pre><code class="lang-Java"><span class="hljs-comment">//&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5F7C;&#x6B64;&#x6301;&#x6709;&#x5BF9;&#x65B9;&#x9700;&#x8981;&#x7684;&#x9501;&#x6807;&#x8BB0;&#x800C;&#x4E0D;&#x91CA;&#x653E;&#x81EA;&#x5DF1;&#x7684;&#x9501;&#x9020;&#x6210;&#x7684;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeadLock</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r1 = ()-&gt;{
+            <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;A&quot;</span>){
+                System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;1&#x83B7;&#x53D6;&#x4E86;&#x9501;A&#xFF0C;&#x7B49;&#x5F85;&#x9501;B&quot;</span>);
+                <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;B&quot;</span>){
+                    System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;1&#x540C;&#x65F6;&#x83B7;&#x53D6;A&#x548C;B&quot;</span>);
+                }
+            }
+        };
+
+        Runnable r2 = ()-&gt;{
+            <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;B&quot;</span>){
+                System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;2&#x83B7;&#x53D6;&#x4E86;&#x9501;B&#xFF0C;&#x7B49;&#x5F85;&#x9501;A&quot;</span>);
+                <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;A&quot;</span>){
+                    System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;2&#x540C;&#x65F6;&#x83B7;&#x53D6;A&#x548C;B&quot;</span>);
+                }
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r1);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r2);
+
+        t1.start();
+        t2.start();
+    }
+}
+</code></pre>
+<h4 id="&#x89E3;&#x9664;&#x6B7B;&#x9501;">&#x89E3;&#x9664;&#x6B7B;&#x9501;</h4>
+<pre><code class="lang-Java"><span class="hljs-comment">/*
+wait():&#x7B49;&#x5F85;&#xFF0C;Object&#x7C7B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x91CA;&#x653E;&#x81EA;&#x5DF1;&#x7684;&#x9501;&#x6807;&#x8BB0;&#xFF0C;&#x8BA9;&#x51FA;CPU&#x8D44;&#x6E90;&#xFF0C;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x961F;&#x5217;
+notify()&#xFF1A;&#x901A;&#x77E5;&#xFF0C;Object&#x7C7B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF08;&#x7531;CPU&#x8C03;&#x5EA6;&#xFF09;&#xFF0C;&#x4F7F;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x9501;&#x6C60;
+notifyAll()&#xFF1A;&#x901A;&#x77E5;&#xFF0C;Object&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5524;&#x9192;&#x7B49;&#x5F85;&#x961F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x4F7F;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x9501;&#x6C60;
+*/</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeadLock2</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r1 = ()-&gt;{
+            <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;A&quot;</span>){
+                <span class="hljs-keyword">try</span> {
+                    <span class="hljs-string">&quot;A&quot;</span>.wait();
+                } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;1&#x83B7;&#x53D6;&#x4E86;&#x9501;A&#xFF0C;&#x7B49;&#x5F85;&#x9501;B&quot;</span>);
+                <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;B&quot;</span>){
+                    System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;1&#x540C;&#x65F6;&#x83B7;&#x53D6;A&#x548C;B&quot;</span>);
+                }
+            }
+        };
+
+        Runnable r2 = ()-&gt;{
+            <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;B&quot;</span>){
+                System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;2&#x83B7;&#x53D6;&#x4E86;&#x9501;B&#xFF0C;&#x7B49;&#x5F85;&#x9501;A&quot;</span>);
+                <span class="hljs-keyword">synchronized</span> (<span class="hljs-string">&quot;A&quot;</span>){
+                    System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;2&#x540C;&#x65F6;&#x83B7;&#x53D6;A&#x548C;B&quot;</span>);
+                    <span class="hljs-string">&quot;A&quot;</span>.notifyAll();
+                }
+            }
+        };
+
+        Thread t1 = <span class="hljs-keyword">new</span> Thread(r1);
+        Thread t2 = <span class="hljs-keyword">new</span> Thread(r2);
+
+        t1.start();
+        t2.start();
+    }
+}
+</code></pre>
+<h3 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h3>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingletonTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+        Runnable r = Boss::getBoss;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+            <span class="hljs-keyword">new</span> Thread(r).start();
+        }
+
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Boss</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Boss</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;1&#x4E2A;Boss&#x5BF9;&#x8C61;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;&quot;</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Boss instance = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-comment">/*
+    public static Boss getBoss(){
+        synchronized (&quot;&quot;){
+            if (instance==null){
+                instance = new Boss();
+            }
+        }
+        return instance;
+    }
+*/</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">synchronized</span> Boss <span class="hljs-title">getBoss</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (instance == <span class="hljs-keyword">null</span>) instance=<span class="hljs-keyword">new</span> Boss();
+        <span class="hljs-keyword">return</span> instance;
+    }
+}
+<span class="hljs-comment">//&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">//1&#x4E2A;Boss&#x5BF9;&#x8C61;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java基础.html" class="navigation navigation-prev " aria-label="Previous page: Java基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Java多线程并发.html" class="navigation navigation-next " aria-label="Next page: Java多线程并发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java多线程","level":"1.8.5","depth":2,"next":{"title":"Java多线程并发","level":"1.8.6","depth":2,"path":"学习java/Java多线程并发.md","ref":"学习java/Java多线程并发.md","articles":[]},"previous":{"title":"Java基础","level":"1.8.4","depth":2,"path":"学习java/Java基础.md","ref":"学习java/Java基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/Java多线程.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1551 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>AQS · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="HashMap的简单实现.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >AQS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x5F88;&#x6709;&#x610F;&#x601D;&#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x5B66;&#x7684;&#x4E1C;&#x897F;&#x8D8A;&#x591A;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x4EE5;&#x524D;&#x7684;&#x5185;&#x5BB9;&#x5F88;&#x6D45;&#x663E;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x9519;&#x7684;&#x3002;&#x5F53;&#x65F6;&#x660E;&#x660E;&#x89C9;&#x5F97;&#x8C41;&#x7136;&#x5F00;&#x6717;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x770B;&#x6765;&#x5176;&#x5B9E;&#x8FD8;&#x662F;&#x8499;&#x5728;&#x9F13;&#x4E2D;&#x3002;&#x8FD9;&#x79CD;&#x611F;&#x89C9;&#x4E4B;&#x524D;&#x4E5F;&#x6709;&#x8FC7;&#xFF0C;&#x4E0A;&#x521D;&#x4E2D;&#x540E;&#x8BF4;&#x5C0F;&#x5B66;&#x5B66;&#x7684;&#x77E5;&#x8BC6;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x4E0A;&#x9AD8;&#x4E2D;&#x540E;&#x8BF4;&#x521D;&#x4E2D;&#x662F;&#x9519;&#x7684;&#x2026;&#x2026;&#x771F;&#x7684;&#x662F;&#x9519;&#x7684;&#x5417;&#xFF1F;&#x6216;&#x8BB8;&#x662F;&#x7684;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x8BB2;&#x6700;&#x6B63;&#x786E;&#x6700;&#x65B0;&#x7684;&#x7406;&#x8BBA;&#x77E5;&#x8BC6;&#xFF0C;&#x6050;&#x6015;&#x8981;&#x201C;&#x529D;&#x9000;&#x201D;&#x5F88;&#x591A;&#x4EBA;&#x3002;&#x8FD9;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x65AD;&#x8FDB;&#x6B65;&#xFF0C;&#x4E0D;&#x65AD;&#x6539;&#x6B63;&#x9519;&#x8BEF;&#x7684;&#x8FC7;&#x7A0B;&#x5427;&#x3002;&#x54EA;&#x6709;&#x4EC0;&#x4E48;&#x771F;&#x6B63;&#x7684;&#x5BF9;&#x4E0E;&#x9519;&#xFF0C;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x8BA4;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x4E8B;&#xFF0C;&#x672A;&#x6765;&#x5C31;&#x4E00;&#x5B9A;&#x4E5F;&#x662F;&#x6B63;&#x786E;&#x7684;&#x5417;&#xFF1F;&#x5B66;&#x65E0;&#x6B62;&#x5883;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x9053;&#x7406;&#x5427;&#xFF01;</p>
+</blockquote>
+<p>&#x8A00;&#x5F52;&#x6B63;&#x4F20;&#xFF0C;&#x7EE7;&#x7EED;&#x5B66;&#x4E60;Java&#x5E76;&#x53D1;&#x76F8;&#x5173;&#x77E5;&#x8BC6;</p>
+<h2 id="aqs&#x6E90;&#x7801;">AQS&#x6E90;&#x7801;</h2>
+<h3 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h3>
+<p>&#x9996;&#x5148;&#x6765;&#x770B;&#x770B;AQS&#xFF08;AbstractQueuedSynchronizer&#xFF09;&#x7684;&#x7C7B;&#x56FE;</p>
+<p><img src="https://gitee.com/yonglone/PicHub/raw/master/20200625112946.png" alt=""></p>
+<p>AQS&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x7EE7;&#x627F;&#x4E86;&#x62BD;&#x8C61;&#x7C7B;AbstractOwnableSynchronizer&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5E8F;&#x5217;&#x5316;&#x63A5;&#x53E3;</p>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x5185;&#x90E8;&#x7C7B;Node&#x548C;ConditionObject</p>
+<h3 id="&#x62BD;&#x8C61;&#x7C7B;aos">&#x62BD;&#x8C61;&#x7C7B;AOS</h3>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AbstractOwnableSynchronizer</span>
+    <span class="hljs-keyword">implements</span> <span class="hljs-title">java</span>.<span class="hljs-title">io</span>.<span class="hljs-title">Serializable</span> </span>{
+
+    <span class="hljs-comment">//&#x5E8F;&#x5217;&#x5316;id</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> serialVersionUID = <span class="hljs-number">3737899427754241961L</span>;
+
+    <span class="hljs-comment">//&#x7A7A;&#x53C2;&#x6784;&#x9020;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-title">AbstractOwnableSynchronizer</span><span class="hljs-params">()</span> </span>{ }
+
+    <span class="hljs-comment">//&#x72EC;&#x5360;&#x6A21;&#x5F0F;&#x540C;&#x6B65;&#x7684;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8005;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> Thread exclusiveOwnerThread;
+
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x62E5;&#x6709;&#x72EC;&#x5360;&#x8BBF;&#x95EE;&#x6743;&#x7684;&#x7EBF;&#x7A0B;</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setExclusiveOwnerThread</span><span class="hljs-params">(Thread thread)</span> </span>{
+        exclusiveOwnerThread = thread;
+    }
+
+    <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x62E5;&#x6709;&#x72EC;&#x5360;&#x8BBF;&#x95EE;&#x6743;&#x7684;&#x7EBF;&#x7A0B;</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">final</span> Thread <span class="hljs-title">getExclusiveOwnerThread</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> exclusiveOwnerThread;
+    }
+}
+</code></pre>
+<h3 id="aqs&#x6E90;&#x7801;">AQS&#x6E90;&#x7801;</h3>
+<h4 id="fileds&#x548C;&#x4E00;&#x4E9B;&#x7B80;&#x5355;methods">Fileds&#x548C;&#x4E00;&#x4E9B;&#x7B80;&#x5355;Methods</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AbstractQueuedSynchronizer</span>
+    <span class="hljs-keyword">extends</span> <span class="hljs-title">AbstractOwnableSynchronizer</span>
+    <span class="hljs-keyword">implements</span> <span class="hljs-title">java</span>.<span class="hljs-title">io</span>.<span class="hljs-title">Serializable</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> serialVersionUID = <span class="hljs-number">7373984972572414691L</span>;
+
+    <span class="hljs-comment">/* &#x7A7A;&#x53C2;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x3002;
+    * &#x5B98;&#x65B9;&#x63CF;&#x8FF0;&#xFF1A; Creates a new  instance with initial synchronization state of zero.
+    */</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-title">AbstractQueuedSynchronizer</span><span class="hljs-params">()</span> </span>{ }
+
+    <span class="hljs-comment">/*&#x5185;&#x90E8;&#x7C7B;Node&#x5728;&#x4E0B;&#x9762;*/</span>
+
+    <span class="hljs-comment">//&#x7B49;&#x5F85;&#x961F;&#x5217;&#x5934;&#x8282;&#x70B9;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;setHead&#x65B9;&#x6CD5;&#x4FEE;&#x6539;</span>
+    <span class="hljs-comment">//&#x5982;&#x679C;head&#x5B58;&#x5728;&#xFF0C;waitStatus&#x4E0D;&#x4F1A;&#x662F;CANCELED</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> <span class="hljs-keyword">volatile</span> Node head;
+
+    <span class="hljs-comment">//&#x7B49;&#x5F85;&#x961F;&#x5217;&#x5C3E;&#x7ED3;&#x70B9;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;enq&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#xFF0C;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x7B49;&#x5F85;&#x7ED3;&#x70B9;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">transient</span> <span class="hljs-keyword">volatile</span> Node tail;
+
+    <span class="hljs-comment">//&#x540C;&#x6B65;&#x5668;&#x72B6;&#x6001;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> state;
+
+    <span class="hljs-comment">/*&#x7701;&#x7565;state&#x7684;setter&amp;getter*/</span>
+
+    <span class="hljs-comment">//CAS</span>
+     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">compareAndSetState</span><span class="hljs-params">(<span class="hljs-keyword">int</span> expect, <span class="hljs-keyword">int</span> update)</span> </span>{
+        <span class="hljs-comment">// &#x8C03;&#x7528;unsafe&#x7684;CAS</span>
+        <span class="hljs-keyword">return</span> unsafe.compareAndSwapInt(<span class="hljs-keyword">this</span>, stateOffset, expect, update);
+    }
+
+    <span class="hljs-comment">//&#x81EA;&#x65CB;&#x7684;&#x7EB3;&#x79D2;&#x9608;&#x503C;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> spinForTimeoutThreshold = <span class="hljs-number">1000L</span>;
+
+    <span class="hljs-comment">/*&#x7701;&#x7565;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0B;&#x9762;&#x8BE6;&#x89E3;*/</span>
+
+    <span class="hljs-comment">//&#x652F;&#x6301;CAS&#x64CD;&#x4F5C;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Unsafe unsafe = Unsafe.getUnsafe();
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> stateOffset;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> headOffset;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> tailOffset;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> waitStatusOffset;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> nextOffset;
+
+    <span class="hljs-keyword">static</span> {
+        <span class="hljs-keyword">try</span> {
+            stateOffset = unsafe.objectFieldOffset
+                (AbstractQueuedSynchronizer.class.getDeclaredField(<span class="hljs-string">&quot;state&quot;</span>));
+            headOffset = unsafe.objectFieldOffset
+                (AbstractQueuedSynchronizer.class.getDeclaredField(<span class="hljs-string">&quot;head&quot;</span>));
+            tailOffset = unsafe.objectFieldOffset
+                (AbstractQueuedSynchronizer.class.getDeclaredField(<span class="hljs-string">&quot;tail&quot;</span>));
+            waitStatusOffset = unsafe.objectFieldOffset
+                (Node.class.getDeclaredField(<span class="hljs-string">&quot;waitStatus&quot;</span>));
+            nextOffset = unsafe.objectFieldOffset
+                (Node.class.getDeclaredField(<span class="hljs-string">&quot;next&quot;</span>));
+
+        } <span class="hljs-keyword">catch</span> (Exception ex) { <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(ex); }
+    }
+}
+</code></pre>
+<h4 id="&#x5185;&#x90E8;&#x7C7B;node">&#x5185;&#x90E8;&#x7C7B;Node</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+    <span class="hljs-comment">//&#x6307;&#x793A;&#x8282;&#x70B9;&#x6B63;&#x5728;&#x5171;&#x4EAB;&#x6A21;&#x5F0F;&#x4E0B;&#x7B49;&#x5F85;&#x7684;&#x6807;&#x8BB0;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Node SHARED = <span class="hljs-keyword">new</span> Node();
+    <span class="hljs-comment">//&#x6307;&#x793A;&#x8282;&#x70B9;&#x6B63;&#x5728;&#x4EE5;&#x72EC;&#x5360;&#x6A21;&#x5F0F;&#x7B49;&#x5F85;&#x7684;&#x6807;&#x8BB0;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Node EXCLUSIVE = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-comment">//waitStatus&#x503C;&#xFF0C;&#x6307;&#x793A;&#x7EBF;&#x7A0B;&#x5DF2;&#x53D6;&#x6D88;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> CANCELLED =  <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//waitStatus&#x503C;&#xFF0C;&#x6307;&#x793A;&#x540E;&#x7EED;&#x7EBF;&#x7A0B;&#x9700;&#x8981;&#x91CA;&#x653E;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> SIGNAL    = -<span class="hljs-number">1</span>;
+    <span class="hljs-comment">//waitStatus&#x503C;&#xFF0C;&#x6307;&#x793A;&#x7EBF;&#x7A0B;&#x6B63;&#x5728;&#x7B49;&#x5F85;&#x6761;&#x4EF6;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> CONDITION = -<span class="hljs-number">2</span>;
+    <span class="hljs-comment">//waitStatus&#x503C;&#xFF0C;&#x6307;&#x793A;&#x4E0B;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x7684;Shared&#x5E94;&#x8BE5;&#x65E0;&#x6761;&#x4EF6;&#x4F20;&#x64AD;</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> PROPAGATE = -<span class="hljs-number">3</span>;
+
+    <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">int</span> waitStatus;
+
+    <span class="hljs-keyword">volatile</span> Node prev;
+
+    <span class="hljs-keyword">volatile</span> Node next;
+
+    <span class="hljs-keyword">volatile</span> Thread thread;
+
+    Node nextWaiter;
+
+    <span class="hljs-function"><span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isShared</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> nextWaiter == SHARED;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">final</span> Node <span class="hljs-title">predecessor</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> NullPointerException </span>{
+        Node p = prev;
+        <span class="hljs-keyword">if</span> (p == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> NullPointerException();
+        <span class="hljs-keyword">else</span>
+            <span class="hljs-keyword">return</span> p;
+    }
+
+    Node() {    <span class="hljs-comment">// &#x7528;&#x4E8E;&#x5EFA;&#x7ACB;&#x521D;&#x59CB;&#x6807;&#x5934;&#x6216;SHARED&#x6807;&#x8BB0;</span>
+    }
+
+    Node(Thread thread, Node mode) {     <span class="hljs-comment">// Used by addWaiter</span>
+        <span class="hljs-keyword">this</span>.nextWaiter = mode;
+        <span class="hljs-keyword">this</span>.thread = thread;
+    }
+
+    Node(Thread thread, <span class="hljs-keyword">int</span> waitStatus) { <span class="hljs-comment">// Used by Condition</span>
+        <span class="hljs-keyword">this</span>.waitStatus = waitStatus;
+        <span class="hljs-keyword">this</span>.thread = thread;
+    }
+}
+</code></pre>
+<h4 id="&#x6392;&#x961F;&#x5DE5;&#x5177;&#x65B9;&#x6CD5;queuing-utilities">&#x6392;&#x961F;&#x5DE5;&#x5177;&#x65B9;&#x6CD5;Queuing utilities</h4>
+<h5 id="enq&#x65B9;&#x6CD5;">enq&#x65B9;&#x6CD5;</h5>
+<blockquote>
+<p>&#x63D2;&#x5165;node&#x5230;&#x961F;&#x5217;</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> Node <span class="hljs-title">enq</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Node node)</span> </span>{
+    <span class="hljs-keyword">for</span> (;;) {
+        Node t = tail;
+        <span class="hljs-keyword">if</span> (t == <span class="hljs-keyword">null</span>) { <span class="hljs-comment">// Must initialize</span>
+            <span class="hljs-keyword">if</span> (compareAndSetHead(<span class="hljs-keyword">new</span> Node()))
+                tail = head;
+        } <span class="hljs-keyword">else</span> {
+            node.prev = t;
+            <span class="hljs-keyword">if</span> (compareAndSetTail(t, node)) {
+                t.next = node;
+                <span class="hljs-keyword">return</span> t;
+            }
+        }
+    }
+}
+</code></pre>
+<h5 id="addwaiter&#x65B9;&#x6CD5;">addwaiter&#x65B9;&#x6CD5;</h5>
+<blockquote>
+<p>&#x4E3A;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x548C;&#x7ED9;&#x5B9A;&#x6A21;&#x5F0F;&#x521B;&#x5EFA;&#x5E76;&#x6392;&#x961F;&#x8282;&#x70B9;</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> Node <span class="hljs-title">addWaiter</span><span class="hljs-params">(Node mode)</span> </span>{
+    Node node = <span class="hljs-keyword">new</span> Node(Thread.currentThread(), mode);
+    <span class="hljs-comment">// Try the fast path of enq; backup to full enq on failure</span>
+    Node pred = tail;
+    <span class="hljs-keyword">if</span> (pred != <span class="hljs-keyword">null</span>) {
+        node.prev = pred;
+        <span class="hljs-keyword">if</span> (compareAndSetTail(pred, node)) {
+            pred.next = node;
+            <span class="hljs-keyword">return</span> node;
+        }
+    }
+    enq(node);
+    <span class="hljs-keyword">return</span> node;
+}
+</code></pre>
+<h5 id="sethead&#x65B9;&#x6CD5;">setHead&#x65B9;&#x6CD5;</h5>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x5934;&#x7ED3;&#x70B9;</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setHead</span><span class="hljs-params">(Node node)</span> </span>{
+    head = node;
+    node.thread = <span class="hljs-keyword">null</span>;
+    node.prev = <span class="hljs-keyword">null</span>;
+}
+</code></pre>
+<h5 id="unparksuccessor&#x65B9;&#x6CD5;">unparkSuccessor&#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-Java"><span class="hljs-comment">//Wakes up node&apos;s successor, if one exists.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">unparkSuccessor</span><span class="hljs-params">(Node node)</span> </span>{
+
+    <span class="hljs-keyword">int</span> ws = node.waitStatus;
+    <span class="hljs-keyword">if</span> (ws &lt; <span class="hljs-number">0</span>)
+        compareAndSetWaitStatus(node, ws, <span class="hljs-number">0</span>);
+
+    Node s = node.next;
+    <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || s.waitStatus &gt; <span class="hljs-number">0</span>) {
+        s = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">for</span> (Node t = tail; t != <span class="hljs-keyword">null</span> &amp;&amp; t != node; t = t.prev)
+            <span class="hljs-keyword">if</span> (t.waitStatus &lt;= <span class="hljs-number">0</span>)
+                s = t;
+    }
+    <span class="hljs-keyword">if</span> (s != <span class="hljs-keyword">null</span>)
+        LockSupport.unpark(s.thread);
+}
+</code></pre>
+<h5 id="doreleaseshared&#x65B9;&#x6CD5;">doReleaseShared&#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doReleaseShared</span><span class="hljs-params">()</span> </span>{
+
+    <span class="hljs-keyword">for</span> (;;) {
+        Node h = head;
+        <span class="hljs-keyword">if</span> (h != <span class="hljs-keyword">null</span> &amp;&amp; h != tail) {
+            <span class="hljs-keyword">int</span> ws = h.waitStatus;
+            <span class="hljs-keyword">if</span> (ws == Node.SIGNAL) {
+                <span class="hljs-keyword">if</span> (!compareAndSetWaitStatus(h, Node.SIGNAL, <span class="hljs-number">0</span>))
+                    <span class="hljs-keyword">continue</span>;            <span class="hljs-comment">// loop to recheck cases</span>
+                unparkSuccessor(h);
+            }
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ws == <span class="hljs-number">0</span> &amp;&amp; !compareAndSetWaitStatus(h, <span class="hljs-number">0</span>, Node.PROPAGATE))
+                <span class="hljs-keyword">continue</span>;                <span class="hljs-comment">// loop on failed CAS</span>
+        }
+        <span class="hljs-keyword">if</span> (h == head)                   <span class="hljs-comment">// loop if head changed</span>
+            <span class="hljs-keyword">break</span>;
+    }
+}
+</code></pre>
+<h5 id="setheadandpropagate&#x65B9;&#x6CD5;">setHeadAndPropagate&#x65B9;&#x6CD5;</h5>
+<pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setHeadAndPropagate</span><span class="hljs-params">(Node node, <span class="hljs-keyword">int</span> propagate)</span> </span>{
+    Node h = head; <span class="hljs-comment">// Record old head for check below</span>
+    setHead(node);
+    <span class="hljs-keyword">if</span> (propagate &gt; <span class="hljs-number">0</span> || h == <span class="hljs-keyword">null</span> || h.waitStatus &lt; <span class="hljs-number">0</span> ||
+        (h = head) == <span class="hljs-keyword">null</span> || h.waitStatus &lt; <span class="hljs-number">0</span>) {
+        Node s = node.next;
+        <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || s.isShared())
+            doReleaseShared();
+    }
+}
+</code></pre>
+<h4 id="star&#x4E3B;&#x8981;&#x65B9;&#x6CD5;main-exported-methods">:star:&#x4E3B;&#x8981;&#x65B9;&#x6CD5;Main exported methods</h4>
+<pre><code class="lang-Java"><span class="hljs-comment">//Attempts to acquire in exclusive mode.</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">tryAcquire</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+}
+
+<span class="hljs-comment">//Attempts to set the state to reflect a release in exclusive mode.</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">tryRelease</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+}
+
+<span class="hljs-comment">//Attempts to acquire in shared mode</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">int</span> <span class="hljs-title">tryAcquireShared</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+}
+
+<span class="hljs-comment">//Attempts to set the state to reflect a release in shared mode</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">tryReleaseShared</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+}
+
+<span class="hljs-comment">//Returns true if synchronization is held exclusively with respect to the current (calling) thread. </span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isHeldExclusively</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+}
+</code></pre>
+<blockquote>
+<p>AQS&#x63D0;&#x4F9B;&#x7684;&#x6A21;&#x677F;&#x65B9;&#x6CD5;</p>
+</blockquote>
+<pre><code class="lang-Java"><span class="hljs-comment">//&#x72EC;&#x5360;&#x5F0F;&#x83B7;&#x53D6;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x83B7;&#x53D6;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x7531;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x961F;&#x5217;&#x7B49;&#x5F85;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x8C03;&#x7528;&#x91CD;&#x5199;&#x7684;tryAcquire&#x65B9;&#x6CD5;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquire</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">if</span> (!tryAcquire(arg) &amp;&amp;
+        acquireQueued(addWaiter(Node.EXCLUSIVE), arg))
+        selfInterrupt();
+}
+
+<span class="hljs-comment">//&#x4E0E;acquire&#x65B9;&#x6CD5;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x8BE5;&#x65B9;&#x6CD5;&#x54CD;&#x5E94;&#x4E2D;&#x65AD;&#xFF0C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x672A;&#x83B7;&#x53D6;&#x5230;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x800C;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x88AB;&#x4E2D;&#x65AD;&#xFF0C;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireInterruptibly</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span>
+    <span class="hljs-keyword">throws</span> InterruptedException </span>{
+    <span class="hljs-keyword">if</span> (Thread.interrupted())
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> InterruptedException();
+    <span class="hljs-keyword">if</span> (!tryAcquire(arg))
+        doAcquireInterruptibly(arg);
+}
+
+<span class="hljs-comment">//&#x5728;acquireInterruptibly&#x65B9;&#x6CD5;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x4E86;&#x8D85;&#x65F6;&#x9650;&#x5236;&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x83B7;&#x53D6;&#x5230;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x8FD4;&#x56DE;false&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#x8FD4;&#x56DE;true</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">tryAcquireNanos</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg, <span class="hljs-keyword">long</span> nanosTimeout)</span>
+    <span class="hljs-keyword">throws</span> InterruptedException </span>{
+    <span class="hljs-keyword">if</span> (Thread.interrupted())
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> InterruptedException();
+    <span class="hljs-keyword">return</span> tryAcquire(arg) ||
+        doAcquireNanos(arg, nanosTimeout);
+}
+
+<span class="hljs-comment">//&#x72EC;&#x5360;&#x5F0F;&#x7684;&#x91CA;&#x653E;&#x540C;&#x6B65;&#x72B6;&#x6001;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x91CA;&#x653E;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x540C;&#x6B65;&#x961F;&#x5217;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5305;&#x542B;&#x7684;&#x7EBF;&#x7A0B;&#x5524;&#x9192;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">release</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">if</span> (tryRelease(arg)) {
+        Node h = head;
+        <span class="hljs-keyword">if</span> (h != <span class="hljs-keyword">null</span> &amp;&amp; h.waitStatus != <span class="hljs-number">0</span>)
+            unparkSuccessor(h);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+
+<span class="hljs-comment">//&#x5171;&#x4EAB;&#x5F0F;&#x7684;&#x83B7;&#x53D6;&#x540C;&#x6B65;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x672A;&#x83B7;&#x53D6;&#x5230;&#x540C;&#x6B65;&#x72B6;&#x6001;&#xFF0C;&#x5C06;&#x4F1A;&#x8FDB;&#x5165;&#x540C;&#x6B65;&#x961F;&#x5217;&#x7B49;&#x5F85;&#x3002;&#x4E0E;&#x72EC;&#x5360;&#x5F0F;&#x83B7;&#x53D6;&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x662F;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x83B7;&#x53D6;&#x5230;&#x540C;&#x6B65;&#x72B6;&#x6001;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireShared</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">if</span> (tryAcquireShared(arg) &lt; <span class="hljs-number">0</span>)
+        doAcquireShared(arg);
+}
+
+<span class="hljs-comment">//&#x4E0E;acquireShared&#x65B9;&#x6CD5;&#x76F8;&#x540C;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x54CD;&#x5E94;&#x4E2D;&#x65AD;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acquireSharedInterruptibly</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span>
+    <span class="hljs-keyword">throws</span> InterruptedException </span>{
+    <span class="hljs-keyword">if</span> (Thread.interrupted())
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> InterruptedException();
+    <span class="hljs-keyword">if</span> (tryAcquireShared(arg) &lt; <span class="hljs-number">0</span>)
+        doAcquireSharedInterruptibly(arg);
+}
+
+<span class="hljs-comment">//&#x5728;acquireSharedInterruptibly&#x65B9;&#x6CD5;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x4E86;&#x8D85;&#x65F6;&#x9650;&#x5236;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">tryAcquireSharedNanos</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg, <span class="hljs-keyword">long</span> nanosTimeout)</span>
+    <span class="hljs-keyword">throws</span> InterruptedException </span>{
+    <span class="hljs-keyword">if</span> (Thread.interrupted())
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> InterruptedException();
+    <span class="hljs-keyword">return</span> tryAcquireShared(arg) &gt;= <span class="hljs-number">0</span> ||
+        doAcquireSharedNanos(arg, nanosTimeout);
+}
+
+<span class="hljs-comment">//&#x5171;&#x4EAB;&#x5F0F;&#x7684;&#x91CA;&#x653E;&#x540C;&#x6B65;&#x72B6;&#x6001;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">releaseShared</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arg)</span> </span>{
+    <span class="hljs-keyword">if</span> (tryReleaseShared(arg)) {
+        doReleaseShared();
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}
+
+<span class="hljs-comment">//&#x83B7;&#x53D6;&#x7B49;&#x5F85;&#x5728;&#x540C;&#x6B65;&#x961F;&#x5217;&#x4E0A;&#x7684;&#x7EBF;&#x7A0B;&#x96C6;&#x5408;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> Collection&lt;Thread&gt; <span class="hljs-title">getQueuedThreads</span><span class="hljs-params">()</span> </span>{
+    ArrayList&lt;Thread&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Thread&gt;();
+    <span class="hljs-keyword">for</span> (Node p = tail; p != <span class="hljs-keyword">null</span>; p = p.prev) {
+        Thread t = p.thread;
+        <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>)
+            list.add(t);
+    }
+    <span class="hljs-keyword">return</span> list;
+}
+</code></pre>
+<h4 id="cas&#x65B9;&#x6CD5;">CAS&#x65B9;&#x6CD5;</h4>
+<pre><code class="lang-Java"><span class="hljs-comment">// CAS head field. Used only by enq.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">compareAndSetHead</span><span class="hljs-params">(Node update)</span> </span>{
+    <span class="hljs-keyword">return</span> unsafe.compareAndSwapObject(<span class="hljs-keyword">this</span>, headOffset, <span class="hljs-keyword">null</span>, update);
+}
+
+<span class="hljs-comment">// CAS tail field. Used only by enq.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">compareAndSetTail</span><span class="hljs-params">(Node expect, Node update)</span> </span>{
+    <span class="hljs-keyword">return</span> unsafe.compareAndSwapObject(<span class="hljs-keyword">this</span>, tailOffset, expect, update);
+}
+
+<span class="hljs-comment">// CAS waitStatus field of a node.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">compareAndSetWaitStatus</span><span class="hljs-params">(Node node,<span class="hljs-keyword">int</span> expect,<span class="hljs-keyword">int</span> update)</span> </span>{
+    <span class="hljs-keyword">return</span> unsafe.compareAndSwapInt(node, waitStatusOffset,expect, update);
+}
+
+<span class="hljs-comment">// CAS next field of a node.</span>
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">compareAndSetNext</span><span class="hljs-params">(Node node,Node expect,Node update)</span> </span>{
+    <span class="hljs-keyword">return</span> unsafe.compareAndSwapObject(node, nextOffset, expect, update);
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 学习Java">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="HashMap的简单实现.html" class="navigation navigation-next " aria-label="Next page: HashMap的简单实现">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AQS","level":"1.8.1","depth":2,"next":{"title":"HashMap的简单实现","level":"1.8.2","depth":2,"path":"学习java/HashMap的简单实现.md","ref":"学习java/HashMap的简单实现.md","articles":[]},"previous":{"title":"学习Java","level":"1.8","depth":1,"path":"学习java/README.md","ref":"学习java/README.md","articles":[{"title":"AQS","level":"1.8.1","depth":2,"path":"学习java/AQS.md","ref":"学习java/AQS.md","articles":[]},{"title":"HashMap的简单实现","level":"1.8.2","depth":2,"path":"学习java/HashMap的简单实现.md","ref":"学习java/HashMap的简单实现.md","articles":[]},{"title":"JavaByteCode","level":"1.8.3","depth":2,"path":"学习java/JavaByteCode.md","ref":"学习java/JavaByteCode.md","articles":[]},{"title":"Java基础","level":"1.8.4","depth":2,"path":"学习java/Java基础.md","ref":"学习java/Java基础.md","articles":[]},{"title":"Java多线程","level":"1.8.5","depth":2,"path":"学习java/Java多线程.md","ref":"学习java/Java多线程.md","articles":[]},{"title":"Java多线程并发","level":"1.8.6","depth":2,"path":"学习java/Java多线程并发.md","ref":"学习java/Java多线程并发.md","articles":[]},{"title":"Java爬虫","level":"1.8.7","depth":2,"path":"学习java/Java爬虫.md","ref":"学习java/Java爬虫.md","articles":[]},{"title":"Java集合","level":"1.8.8","depth":2,"path":"学习java/Java集合.md","ref":"学习java/Java集合.md","articles":[]},{"title":"Java常用类","level":"1.8.9","depth":2,"path":"学习java/java常用类.md","ref":"学习java/java常用类.md","articles":[]},{"title":"Jvm","level":"1.8.10","depth":2,"path":"学习java/jvm.md","ref":"学习java/jvm.md","articles":[]},{"title":"Noifelse","level":"1.8.11","depth":2,"path":"学习java/noifelse.md","ref":"学习java/noifelse.md","articles":[]},{"title":"Socket","level":"1.8.12","depth":2,"path":"学习java/socket.md","ref":"学习java/socket.md","articles":[]},{"title":"一些Java方法","level":"1.8.13","depth":2,"path":"学习java/一些Java方法.md","ref":"学习java/一些Java方法.md","articles":[]},{"title":"一些其他人写的博客","level":"1.8.14","depth":2,"path":"学习java/一些其他人写的博客.md","ref":"学习java/一些其他人写的博客.md","articles":[]},{"title":"硬核空间","level":"1.8.15","depth":2,"path":"学习java/硬核空间.md","ref":"学习java/硬核空间.md","articles":[]},{"title":"遇到的问题","level":"1.8.16","depth":2,"path":"学习java/遇到的问题.md","ref":"学习java/遇到的问题.md","articles":[]},{"title":"阻塞队列","level":"1.8.17","depth":2,"path":"学习java/阻塞队列.md","ref":"学习java/阻塞队列.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/AQS.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

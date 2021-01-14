@@ -74,10 +74,10 @@ $content-desktop-large = 900px
 <blockquote class="blockquote-center">blah blah blah</blockquote>
 
 <!-- 标签 方式，要求版本在0.4.5或以上 -->
-{% centerquote %}blah blah blah{% endcenterquote %}
+{% raw %}{% centerquote %}blah blah blah{% endcenterquote %}{% endraw %}
 
 <!-- 标签别名 -->
-{% cq %} blah blah blah {% endcq %}
+{% raw %}{% cq %} blah blah blah {% endcq %}{% endraw %}
 ```
 
 
@@ -145,6 +145,7 @@ password:
 打开themes/next/layout/_partials/footer.swig,使用””隐藏之间的代码即可，或者直接删除。
 
 ```html
+{% raw %}
 <!--
 <div class="powered-by">
   {{ __(footer.powered, <a class="theme-link" rel="external nofollow" href="https://hexo.io">Hexo</a>) }}</div>
@@ -154,6 +155,7 @@ password:
     NexT.{{ theme.scheme }}  </a>
 </div>
 -->
+{% endraw %}
 ```
 
 

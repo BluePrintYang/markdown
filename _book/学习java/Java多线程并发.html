@@ -1,0 +1,1469 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java多线程并发 · My Study Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanglonglong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Java爬虫.html" />
+    
+    
+    <link rel="prev" href="Java多线程.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.yangllong.top/" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Linux相关/">
+            
+                <a href="../Linux相关/">
+            
+                    
+                    Linux相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Linux相关/make工具的使用.html">
+            
+                <a href="../Linux相关/make工具的使用.html">
+            
+                    
+                    Make工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../springboot/">
+            
+                <a href="../springboot/">
+            
+                    
+                    Springboot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../springboot/springboot一些遇到的问题.html">
+            
+                <a href="../springboot/springboot一些遇到的问题.html">
+            
+                    
+                    Springboot一些遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue+ssm跨域问题.html">
+            
+                <a href="../vue/vue+ssm跨域问题.html">
+            
+                    
+                    Vue+Ssm跨域问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/vue-cli3.html">
+            
+                <a href="../vue/vue-cli3.html">
+            
+                    
+                    Vue Cli3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../vue/安装vue.html">
+            
+                <a href="../vue/安装vue.html">
+            
+                    
+                    安装Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../其他/">
+            
+                <a href="../其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../其他/分布式系统.html">
+            
+                <a href="../其他/分布式系统.html">
+            
+                    
+                    分布式系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../其他/图解http.html">
+            
+                <a href="../其他/图解http.html">
+            
+                    
+                    图解Http
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../其他/消息队列.html">
+            
+                <a href="../其他/消息队列.html">
+            
+                    
+                    消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../其他/爬虫.html">
+            
+                <a href="../其他/爬虫.html">
+            
+                    
+                    爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../刷题/">
+            
+                <a href="../刷题/">
+            
+                    
+                    刷题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../刷题/NOJ.html">
+            
+                <a href="../刷题/NOJ.html">
+            
+                    
+                    NOJ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../刷题/leetcode/">
+            
+                <a href="../刷题/leetcode/">
+            
+                    
+                    Leetcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../刷题/leetcode/107简单题.html">
+            
+                <a href="../刷题/leetcode/107简单题.html">
+            
+                    
+                    107简单题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../刷题/leetcode/2两数相加.html">
+            
+                <a href="../刷题/leetcode/2两数相加.html">
+            
+                    
+                    2两数相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                <a href="../刷题/leetcode/3无重复子串的最大长度.html">
+            
+                    
+                    3无重复子串的最大长度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../刷题/扇贝杯csdn.html">
+            
+                <a href="../刷题/扇贝杯csdn.html">
+            
+                    
+                    扇贝杯Csdn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../刷题/排序算法.html">
+            
+                <a href="../刷题/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../刷题/蓝桥杯.html">
+            
+                <a href="../刷题/蓝桥杯.html">
+            
+                    
+                    蓝桥杯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../刷题/蓝桥杯热身赛.html">
+            
+                <a href="../刷题/蓝桥杯热身赛.html">
+            
+                    
+                    蓝桥杯热身赛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../刷题/计算机等级考试(C语言">
+            
+                <span>
+            
+                    
+                    计算机等级考试(C语言)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../博客/">
+            
+                <a href="../博客/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../博客/next主题配置.html">
+            
+                <a href="../博客/next主题配置.html">
+            
+                    
+                    Next主题配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../博客/一些问题的记录.html">
+            
+                <a href="../博客/一些问题的记录.html">
+            
+                    
+                    一些问题的记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    学习Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="AQS.html">
+            
+                <a href="AQS.html">
+            
+                    
+                    AQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="HashMap的简单实现.html">
+            
+                <a href="HashMap的简单实现.html">
+            
+                    
+                    HashMap的简单实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="JavaByteCode.html">
+            
+                <a href="JavaByteCode.html">
+            
+                    
+                    JavaByteCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Java基础.html">
+            
+                <a href="Java基础.html">
+            
+                    
+                    Java基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Java多线程.html">
+            
+                <a href="Java多线程.html">
+            
+                    
+                    Java多线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.6" data-path="Java多线程并发.html">
+            
+                <a href="Java多线程并发.html">
+            
+                    
+                    Java多线程并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Java爬虫.html">
+            
+                <a href="Java爬虫.html">
+            
+                    
+                    Java爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Java集合.html">
+            
+                <a href="Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="java常用类.html">
+            
+                <a href="java常用类.html">
+            
+                    
+                    Java常用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="jvm.html">
+            
+                <a href="jvm.html">
+            
+                    
+                    Jvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="noifelse.html">
+            
+                <a href="noifelse.html">
+            
+                    
+                    Noifelse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="一些Java方法.html">
+            
+                <a href="一些Java方法.html">
+            
+                    
+                    一些Java方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="一些其他人写的博客.html">
+            
+                <a href="一些其他人写的博客.html">
+            
+                    
+                    一些其他人写的博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="硬核空间.html">
+            
+                <a href="硬核空间.html">
+            
+                    
+                    硬核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="遇到的问题.html">
+            
+                <a href="遇到的问题.html">
+            
+                    
+                    遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="阻塞队列.html">
+            
+                <a href="阻塞队列.html">
+            
+                    
+                    阻塞队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../安卓开发/">
+            
+                <a href="../安卓开发/">
+            
+                    
+                    安卓开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../安卓开发/First App.html">
+            
+                <a href="../安卓开发/First App.html">
+            
+                    
+                    First App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../安卓开发/problems.html">
+            
+                <a href="../安卓开发/problems.html">
+            
+                    
+                    Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../工具/">
+            
+                <a href="../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../工具/IDEA.html">
+            
+                <a href="../工具/IDEA.html">
+            
+                    
+                    IDEA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../工具/docker.html">
+            
+                <a href="../工具/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../工具/github.html">
+            
+                <a href="../工具/github.html">
+            
+                    
+                    Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../数据库/MVCC.html">
+            
+                <a href="../数据库/MVCC.html">
+            
+                    
+                    MVCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../数据库/MySQL.html">
+            
+                <a href="../数据库/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../数据库/Redis.html">
+            
+                <a href="../数据库/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../数据结构知识/">
+            
+                <a href="../数据结构知识/">
+            
+                    
+                    数据结构知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../数据结构知识/大话数据结构笔记1.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记1.html">
+            
+                    
+                    大话数据结构笔记1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../数据结构知识/大话数据结构笔记2.html">
+            
+                <a href="../数据结构知识/大话数据结构笔记2.html">
+            
+                    
+                    大话数据结构笔记2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../面试笔试/">
+            
+                <a href="../面试笔试/">
+            
+                    
+                    面试笔试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../面试笔试/字节跳动5月11日笔试.html">
+            
+                <a href="../面试笔试/字节跳动5月11日笔试.html">
+            
+                    
+                    字节跳动5月11日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../面试笔试/阿里3月23日笔试.html">
+            
+                <a href="../面试笔试/阿里3月23日笔试.html">
+            
+                    
+                    阿里3月23日笔试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../面试笔试/面试突击.html">
+            
+                <a href="../面试笔试/面试突击.html">
+            
+                    
+                    面试突击
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Java多线程并发</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="java&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;">Java&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x53D1;</h2>
+<h3 id="java&#x7EBF;&#x7A0B;&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;">Java&#x7EBF;&#x7A0B;&#x5B9E;&#x73B0;/&#x521B;&#x5EFA;&#x65B9;&#x6CD5;</h3>
+<h4 id="&#x7EE7;&#x627F;thread&#x7C7B;">&#x7EE7;&#x627F;Thread&#x7C7B;</h4>
+<p>Thread&#x7C7B;&#x672C;&#x8D28;&#x662F;&#x5B9E;&#x73B0;&#x4E86;Runnable&#x63A5;&#x53E3;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;Thread&#x7C7B;&#x7684;start()&#x65B9;&#x6CD5;&#x3002;<u>start&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x4E2A;native&#x65B9;&#x6CD5;</u>&#xFF08;&#x4E00;&#x4E2A;Native Method&#x5C31;&#x662F;&#x4E00;&#x4E2A;java&#x8C03;&#x7528;&#x975E;java&#x4EE3;&#x7801;&#x7684;&#x63A5;&#x53E3;&#xFF09;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Thread</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">&quot;MyThread.run()&quot;</span>);
+    }
+}
+MyThread myThread1 = <span class="hljs-keyword">new</span> MyThread();
+myThread1.start();
+</code></pre>
+<h4 id="&#x5B9E;&#x73B0;runnable&#x63A5;&#x53E3;">&#x5B9E;&#x73B0;Runnable&#x63A5;&#x53E3;</h4>
+<p>&#x5982;&#x679C;&#x81EA;&#x5DF1;&#x7684;&#x7C7B;&#x5DF2;&#x7ECF;extends&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x5C31;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;extends Thread&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;Runnable&#x63A5;&#x53E3;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyThread2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">OtherClass</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>{
+        System.out.println(<span class="hljs-string">&quot;MyThread2.run()&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">/*
+        &#x542F;&#x52A8;MyThread2&#xFF0C;&#x9700;&#x8981;&#x9996;&#x5148;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;Thread&#xFF0C;&#x5E76;&#x4F20;&#x5165;&#x81EA;&#x5DF1;&#x7684;MyThread&#x5B9E;&#x4F8B;
+         */</span>
+        MyThread2 myThread2 = <span class="hljs-keyword">new</span> MyThread2();
+        Thread thread = <span class="hljs-keyword">new</span> Thread(myThread2);
+        thread.start();
+        <span class="hljs-comment">/*
+        &#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5F53;&#x4F20;&#x5165;&#x4E00;&#x4E2A;Runnable target&#x53C2;&#x6570;&#x7ED9;Thread&#x540E;&#xFF0C;Thread&#x7684;run()&#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x8C03;&#x7528;target.run()
+         */</span>
+
+    }
+}
+</code></pre>
+<h4 id="executorservice&#x3001;callable-class-&#x3001;future&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7EBF;&#x7A0B;">ExecutorService&#x3001;Callable&lt; Class &gt;&#x3001;Future&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7EBF;&#x7A0B;</h4>
+<p>&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x4EFB;&#x52A1;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;Callable&#x63A5;&#x53E3;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x4EFB;&#x52A1;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;Runnable&#x63A5;&#x53E3;&#x3002;&#x6267;&#x884C;Callable&#x4EFB;&#x52A1;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;Future&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8BE5;&#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;get&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;Callable&#x4EFB;&#x52A1;&#x8FD4;&#x56DE;&#x7684;Object&#x4E86;&#xFF0C;&#x518D;&#x7ED3;&#x5408;&#x7EBF;&#x7A0B;&#x6C60;&#x63A5;&#x53E3;ExecutorService&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6709;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x591A;&#x7EBF;&#x7A0B;&#x4E86;</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pool</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> ExecutionException, InterruptedException </span>{
+        <span class="hljs-keyword">int</span> taskSize = <span class="hljs-number">3</span>;
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;</span>
+        ExecutorService pool = Executors.newFixedThreadPool(taskSize);
+        <span class="hljs-comment">//&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x4EFB;&#x52A1;</span>
+        List&lt;Future&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Future&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; taskSize; i++){
+            Callable c = <span class="hljs-keyword">new</span> MyCallable(i+<span class="hljs-string">&quot; &quot;</span>);
+            <span class="hljs-comment">//&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x5E76;&#x83B7;&#x53D6;Future&#x5BF9;&#x8C61;</span>
+            Future f = pool.submit(c);
+            list.add(f);
+        }
+        <span class="hljs-comment">//&#x5173;&#x95ED;&#x7EBF;&#x7A0B;&#x6C60;</span>
+        pool.shutdown();
+        <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5E76;&#x53D1;&#x4EFB;&#x52A1;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span>
+        <span class="hljs-keyword">for</span> (Future f : list){
+            <span class="hljs-comment">//&#x4ECE;Future&#x5BF9;&#x8C61;&#x4E0A;&#x83B7;&#x53D6;&#x4EFB;&#x52A1;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;</span>
+            System.out.println(<span class="hljs-string">&quot;res: &quot;</span>+f.get().toString());
+        }
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCallable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Callable</span> </span>{
+
+    <span class="hljs-keyword">private</span> String oid;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyCallable</span><span class="hljs-params">(String oid)</span> </span>{
+        <span class="hljs-keyword">this</span>.oid = oid;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-keyword">return</span> oid+<span class="hljs-string">&quot;&#x4EFB;&#x52A1;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5BB9;&quot;</span>;
+    }
+}
+</code></pre>
+<h4 id="&#x57FA;&#x4E8E;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x65B9;&#x5F0F;">&#x57FA;&#x4E8E;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x65B9;&#x5F0F;</h4>
+<pre><code class="lang-Java"><span class="hljs-comment">//&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x6C60;</span>
+ExecutorService threadPool = Executors.newFixedThreadPool(<span class="hljs-number">10</span>);
+<span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>){
+    threadPool.execute(<span class="hljs-keyword">new</span> Runnable() {
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+            System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot; is running .. &quot;</span>);
+            <span class="hljs-keyword">try</span>{
+                Thread.sleep(<span class="hljs-number">3000</span>);
+            } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+            e.printStackTrace();
+            }
+        }
+    });
+}
+</code></pre>
+<h3 id="4&#x79CD;&#x7EBF;&#x7A0B;&#x6C60;">4&#x79CD;&#x7EBF;&#x7A0B;&#x6C60;</h3>
+<p>Java&#x91CC;&#x9762;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x9876;&#x7EA7;&#x63A5;&#x53E3;&#x662F;Executor&#xFF0C;&#x4F46;&#x662F;&#x4E25;&#x683C;&#x610F;&#x4E49;&#x4E0A;&#x8BB2;Executor&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x800C;&#x662F;&#x6267;&#x884C;&#x7EBF;&#x7A0B;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x771F;&#x6B63;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x63A5;&#x53E3;&#x662F;ExecutorService</p>
+<h4 id="newcachedthreadpool">newCachedThreadPool</h4>
+<p>&#x8C03;&#x7528;executor&#x5C06;&#x91CD;&#x7528;&#x4EE5;&#x524D;&#x6784;&#x9020;&#x7684;&#x7EBF;&#x7A0B;&#xFF08;&#x5982;&#x679C;&#x7EBF;&#x7A0B;&#x53EF;&#x7528;&#xFF09;&#x3002;&#x5982;&#x679C;&#x7EBF;&#x7A0B;&#x4E2D;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x7684;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7EBF;&#x7A0B;&#x5E76;&#x6DFB;&#x52A0;&#x5230;&#x6C60;&#x4E2D;&#x3002;&#x7EC8;&#x6B62;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x79FB;&#x9664;&#x90A3;&#x4E9B;&#x5DF2;&#x6709;60&#x79D2;&#x949F;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x7EBF;&#x7A0B;</p>
+<h4 id="newfixedthreadpool">newFixedThreadPool</h4>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x91CD;&#x7528;&#x56FA;&#x5B9A;&#x7EBF;&#x7A0B;&#x6570;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x4EE5;&#x5171;&#x4EAB;&#x7684;&#x65E0;&#x754C;&#x961F;&#x5217;&#x65B9;&#x5F0F;&#x6765;&#x8FD0;&#x884C;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;</p>
+<h4 id="newscheduledthreadpool">newScheduledThreadPool</h4>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x5B83;&#x53EF;&#x5728;&#x7ED9;&#x5B9A;&#x5EF6;&#x8FDF;&#x540E;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x6216;&#x8005;&#x5B9A;&#x671F;&#x5730;&#x6267;&#x884C;</p>
+<pre><code class="lang-Java">ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(<span class="hljs-number">3</span>);
+       scheduledThreadPool.schedule(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;&#x5EF6;&#x65F6;3&#x79D2;&quot;</span>);
+            }
+        },<span class="hljs-number">3</span>, TimeUnit.SECONDS);
+        scheduledThreadPool.scheduleAtFixedRate(<span class="hljs-keyword">new</span> Runnable() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                System.out.println(<span class="hljs-string">&quot;&#x5EF6;&#x8FDF;1&#x79D2;&#x540E;&#x6BCF;&#x4E09;&#x79D2;&#x6267;&#x884C;1&#x6B21;&quot;</span>);
+            }
+        },<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,TimeUnit.SECONDS);
+</code></pre>
+<h4 id="newsinglethreadexecutor">newSingleThreadExecutor</h4>
+<p>Executors.newSingleThreadExecutor()&#x8FD4;&#x56DE;&#x8981;&#x7ED9;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#x53EA;&#x6709;&#x7EBF;&#x7A0B;&#x3002;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#x53EF;&#x4EE5;&#x5728;&#x7EBF;&#x7A0B;&#x6B7B;&#x540E;&#xFF08;&#x6216;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#xFF09;&#x91CD;&#x542F;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6765;&#x66FF;&#x4EE3;&#x539F;&#x6765;&#x7684;&#x7EBF;&#x7A0B;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x4E0B;&#x53BB;</p>
+<h3 id="&#x7EBF;&#x7A0B;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x72B6;&#x6001;&#xFF09;">&#x7EBF;&#x7A0B;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x72B6;&#x6001;&#xFF09;</h3>
+<h4 id="&#x65B0;&#x5EFA;&#x72B6;&#x6001;">&#x65B0;&#x5EFA;&#x72B6;&#x6001;</h4>
+<p>&#x4F7F;&#x7528;new&#x5173;&#x952E;&#x8BCD;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x540E;&#xFF0C;&#x5904;&#x4E8E;&#x65B0;&#x5EFA;&#x72B6;&#x6001;&#xFF0C;&#x4EC5;&#x7531;JVM&#x4E3A;&#x5176;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5176;&#x6210;&#x5458;&#x53D8;&#x91CF;</p>
+<h4 id="&#x5C31;&#x7EEA;&#x72B6;&#x6001;">&#x5C31;&#x7EEA;&#x72B6;&#x6001;</h4>
+<p>&#x7EBF;&#x7A0B;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x4E86;start()&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#x3002;Java&#x865A;&#x62DF;&#x673A;&#x4F1A;&#x4E3A;&#x5176;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x6808;&#x548C;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x7B49;&#x5F85;&#x8C03;&#x5EA6;&#x8FD0;&#x884C;</p>
+<h4 id="&#x8FD0;&#x884C;&#x72B6;&#x6001;">&#x8FD0;&#x884C;&#x72B6;&#x6001;</h4>
+<p>&#x5C31;&#x7EEA;&#x72B6;&#x6001;&#x7684;&#x7EBF;&#x7A0B;&#x83B7;&#x5F97;&#x4E86;cpu&#xFF0C;&#x5F00;&#x59CB;&#x6267;&#x884C;run()&#x65B9;&#x6CD5;&#x7684;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4F53;</p>
+<h4 id="&#x963B;&#x585E;&#x72B6;&#x6001;">&#x963B;&#x585E;&#x72B6;&#x6001;</h4>
+<p>&#x7531;&#x4E8E;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x653E;&#x5F03;&#x4E86;cpu&#x4F7F;&#x7528;&#x6743;</p>
+<p>&#x5206;&#x4E09;&#x79CD;&#x60C5;&#x51B5;</p>
+<ul>
+<li>&#x7B49;&#x5F85;&#x963B;&#x585E;&#xFF1A;&#x6267;&#x884C;wait()&#x65B9;&#x6CD5;</li>
+<li>&#x540C;&#x6B65;&#x963B;&#x585E;&#xFF1A;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x540C;&#x6B65;&#x9501;&#x65F6;&#xFF0C;&#x540C;&#x6B65;&#x9501;&#x88AB;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x5360;&#x7528;&#xFF0C;JVM&#x4F1A;&#x628A;&#x8BE5;&#x7EBF;&#x7A0B;&#x653E;&#x5165;&#x9501;&#x6C60;&#x4E2D;</li>
+<li>&#x5176;&#x4ED6;&#x963B;&#x585E;&#xFF1A;&#x6267;&#x884C;Thread.sleep(long ms)&#x6216;t.join()&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x53D1;&#x51FA;&#x4E86;I/O&#x8BF7;&#x6C42;</li>
+</ul>
+<h4 id="&#x7EBF;&#x7A0B;&#x6B7B;&#x4EA1;">&#x7EBF;&#x7A0B;&#x6B7B;&#x4EA1;</h4>
+<p>&#x7EBF;&#x7A0B;&#x4F1A;&#x4EE5;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x7ED3;&#x675F;&#xFF0C;&#x7ED3;&#x675F;&#x540E;&#x5C31;&#x662F;&#x6B7B;&#x4EA1;&#x72B6;&#x6001;</p>
+<ul>
+<li>&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#xFF1A;run()&#x6216;call()&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6210;</li>
+<li>&#x5F02;&#x5E38;&#x7ED3;&#x675F;&#xFF1A;&#x7EBF;&#x7A0B;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x672A;&#x6355;&#x83B7;&#x7684;Exception&#x6216;Error</li>
+<li>&#x8C03;&#x7528;stop&#xFF1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#x7684;stop()&#x65B9;&#x6CD5;&#x6765;&#x7ED3;&#x675F;&#x6539;&#x7EBF;&#x7A0B;&#x2014;&#x2014;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x6B7B;&#x9501;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;</li>
+</ul>
+<h3 id="sleep&#x4E0E;wait&#x533A;&#x522B;">sleep&#x4E0E;wait&#x533A;&#x522B;</h3>
+<ol>
+<li>sleep()&#x65B9;&#x6CD5;&#x5C5E;&#x4E8E;Thread&#x7C7B;&#xFF1B;wait()&#x65B9;&#x6CD5;&#x5C5E;&#x4E8E;Object&#x7C7B;</li>
+<li>sleep()&#x65B9;&#x6CD5;&#x8BA9;&#x51FA;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x7684;cpu&#x7ED9;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#xFF0C;&#x5230;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x6062;&#x590D;&#x8FD0;&#x884C;</li>
+<li>&#x8C03;&#x7528;sleep()&#x65B9;&#x6CD5;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x91CA;&#x653E;&#x5BF9;&#x8C61;&#x9501;</li>
+<li>&#x8C03;&#x7528;wait()&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x4F1A;&#x653E;&#x5F03;&#x5BF9;&#x8C61;&#x9501;&#xFF0C;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x6B64;&#x5BF9;&#x8C61;&#x7684;&#x7B49;&#x5F85;&#x9501;&#x5B9A;&#x6C60;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x9488;&#x5BF9;&#x6B64;&#x5BF9;&#x8C61;&#x7684;notify()&#x65B9;&#x6CD5;&#x540E;&#x624D;&#x4F1A;&#x8FDB;&#x5165;&#x8FD0;&#x884C;&#x72B6;&#x6001;</li>
+</ol>
+<h3 id="start&#x4E0E;run&#x533A;&#x522B;">start&#x4E0E;run&#x533A;&#x522B;</h3>
+<ol>
+<li>start()&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x542F;&#x52A8;&#x7EBF;&#x7A0B;&#xFF0C;&#x771F;&#x6B63;&#x5B9E;&#x73B0;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x3002;&#x65E0;&#x9700;&#x7B49;&#x5F85;run()&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;</li>
+<li>&#x8C03;&#x7528;Thread&#x7C7B;&#x7684;start()&#x65B9;&#x6CD5;&#x6765;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x6B64;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;<u>&#x5C31;&#x7EEA;&#x72B6;&#x6001;</u></li>
+<li>&#x65B9;&#x6CD5;run()&#x79F0;&#x4E3A;&#x7EBF;&#x7A0B;&#x4F53;&#xFF0C;&#x5305;&#x542B;&#x8981;&#x6267;&#x884C;&#x7684;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7EBF;&#x7A0B;&#x5C31;&#x8FDB;&#x5165;&#x4E86;<u>&#x8FD0;&#x884C;&#x72B6;&#x6001;</u>&#xFF0C;&#x5F00;&#x59CB;&#x8FD0;&#x884C;run&#x51FD;&#x6570;&#x5F53;&#x4E2D;&#x7684;&#x4EE3;&#x7801;</li>
+</ol>
+<h3 id="java&#x9501;">Java&#x9501;</h3>
+<h4 id="&#x4E50;&#x89C2;&#x9501;">&#x4E50;&#x89C2;&#x9501;</h4>
+<p>&#x8BA4;&#x4E3A;&#x8BFB;&#x591A;&#x5199;&#x5C11;&#x3002;</p>
+<p>Java&#x4E2D;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x901A;&#x8FC7;CAS&#x64CD;&#x4F5C;&#x5B9E;&#x73B0;&#xFF0C;CAS&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x65B0;&#x7684;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x8F83;&#x5F53;&#x524D;&#x503C;&#x8DDF;&#x4F20;&#x5165;&#x503C;&#x662F;&#x5426;&#x4E00;&#x6837;&#xFF0C;&#x4E00;&#x6837;&#x5C31;&#x66F4;&#x65B0;&#xFF0C;&#x5426;&#x5219;&#x5931;&#x6548;</p>
+<h4 id="&#x60B2;&#x89C2;&#x9501;">&#x60B2;&#x89C2;&#x9501;</h4>
+<p>&#x8BA4;&#x4E3A;&#x5199;&#x591A;</p>
+<p>Java&#x4E2D;&#x7684;&#x60B2;&#x89C2;&#x9501;&#x662F;Synchronized&#xFF0C;AQS&#x6846;&#x67B6;&#x4E0B;&#x7684;&#x9501;&#x5219;&#x662F;&#x5148;&#x5C1D;&#x8BD5;cas&#x4E50;&#x89C2;&#x9501;&#x53BB;&#x83B7;&#x53D6;&#x9501;&#xFF0C;&#x83B7;&#x53D6;&#x4E0D;&#x5230;&#x624D;&#x4F1A;&#x8F6C;&#x6362;&#x4E3A;&#x60B2;&#x89C2;&#x9501;</p>
+<h4 id="&#x81EA;&#x65CB;&#x9501;">&#x81EA;&#x65CB;&#x9501;</h4>
+<h3 id="volatile&#x5173;&#x952E;&#x8BCD;">volatile&#x5173;&#x952E;&#x8BCD;</h3>
+<h4 id="&#x53D8;&#x91CF;&#x53EF;&#x89C1;&#x6027;">&#x53D8;&#x91CF;&#x53EF;&#x89C1;&#x6027;</h4>
+<p>&#x6709;volatile&#x4FEE;&#x9970;&#x7684;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x5728;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x4F1A;&#x591A;&#x4E00;&#x884C;&#x5E26;&#x6709;Lock&#x524D;&#x7F00;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;</p>
+<p>Lock&#x524D;&#x7F00;&#x7684;&#x6307;&#x4EE4;&#x5728;&#x591A;&#x6838;&#x5904;&#x7406;&#x5668;&#x4E0B;&#x4F1A;&#x5F15;&#x53D1;&#x4E24;&#x4EF6;&#x4E8B;</p>
+<ol>
+<li>&#x5C06;&#x5F53;&#x524D;&#x5904;&#x7406;&#x5668;&#x7F13;&#x5B58;&#x884C;&#x7684;&#x6570;&#x636E;&#x5199;&#x56DE;&#x5230;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;</li>
+<li>&#x8FD9;&#x4E2A;&#x5199;&#x56DE;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;&#x4F1A;&#x4F7F;&#x5728;&#x5176;&#x4ED6;CPU&#x91CC;&#x7F13;&#x5B58;&#x4E86;&#x8BE5;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x6570;&#x636E;&#x65E0;&#x6548;</li>
+</ol>
+<p>&#x7F13;&#x5B58;&#x4E00;&#x81F4;&#x6027;&#x534F;&#x8BAE;&#xFF0C;&#x6BCF;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x901A;&#x8FC7;&#x55C5;&#x63A2;&#x5728;&#x603B;&#x7EBF;&#x4E0A;&#x4F20;&#x64AD;&#x7684;&#x6570;&#x636E;&#x6765;&#x68C0;&#x67E5;&#x81EA;&#x5DF1;&#x7F13;&#x5B58;&#x7684;&#x503C;&#x662F;&#x5426;&#x8FC7;&#x671F;&#xFF0C;&#x82E5;&#x53D1;&#x73B0;&#x5DF2;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x5219;&#x4F1A;&#x5C06;&#x7F13;&#x5B58;&#x884C;&#x8BBE;&#x7F6E;&#x4E3A;&#x65E0;&#x6548;&#x72B6;&#x6001;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x4F1A;&#x91CD;&#x65B0;&#x4ECE;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5230;&#x7F13;&#x5B58;</p>
+<blockquote>
+<p>&#x7F13;&#x5B58;&#x884C;&#xFF1A;&#x7F13;&#x5B58;&#x4E2D;&#x53EF;&#x4EE5;&#x5206;&#x914D;&#x7684;&#x6700;&#x5C0F;&#x5B58;&#x50A8;&#x5355;&#x4F4D;</p>
+</blockquote>
+<h4 id="&#x7981;&#x6B62;&#x91CD;&#x6392;&#x5E8F;">&#x7981;&#x6B62;&#x91CD;&#x6392;&#x5E8F;</h4>
+<h3 id="synchronized&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;">Synchronized&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;</h3>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x9501;&#x662F;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</li>
+<li>&#x5BF9;&#x4E8E;&#x9759;&#x6001;&#x540C;&#x6B65;&#x65B9;&#x6CD5;&#xFF0C;&#x9501;&#x662F;&#x5F53;&#x524D;&#x7C7B;&#x7684;Class&#x5BF9;&#x8C61;</li>
+<li>&#x5BF9;&#x4E8E;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x9501;&#x662F;Synchronized&#x62EC;&#x53F7;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#x5BF9;&#x8C61;</li>
+</ul>
+<blockquote>
+<p>JVM&#x57FA;&#x4E8E;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;Monitor&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x540C;&#x6B65;&#x548C;&#x4EE3;&#x7801;&#x5757;&#x540C;&#x6B65;&#xFF0C;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540C;&#x6B65;&#x662F;&#x4F7F;&#x7528;monitorenter&#x548C;monitorexit&#x6307;&#x4EE4;&#x5B9E;&#x73B0;</p>
+</blockquote>
+<h4 id="java&#x5BF9;&#x8C61;&#x5934;">Java&#x5BF9;&#x8C61;&#x5934;</h4>
+<p>synchronized&#x7528;&#x7684;&#x9501;&#x5B58;&#x5728;Java&#x5BF9;&#x8C61;&#x5934;&#x91CC;&#x9762;</p>
+<h4 id="&#x9501;&#x5347;&#x7EA7;">&#x9501;&#x5347;&#x7EA7;</h4>
+<ol>
+<li>&#x65E0;&#x9501;&#x72B6;&#x6001;</li>
+<li>&#x504F;&#x5411;&#x9501;&#x72B6;&#x6001;<ul>
+<li>&#x4F18;&#x70B9;&#xFF1A;&#x52A0;&#x9501;&#x89E3;&#x9501;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x6D88;&#x8017;&#xFF0C;&#x901F;&#x5EA6;&#x5FEB;</li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;&#x5982;&#x679C;&#x7EBF;&#x7A0B;&#x5B58;&#x5728;&#x9501;&#x7ADE;&#x4E89;&#xFF0C;&#x4F1A;&#x5E26;&#x6765;&#x989D;&#x5916;&#x7684;&#x9501;&#x64A4;&#x9500;&#x7684;&#x6D88;&#x8017;</li>
+<li>&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;</li>
+</ul>
+</li>
+<li>&#x8F7B;&#x91CF;&#x7EA7;&#x9501;&#x72B6;&#x6001;<ul>
+<li>&#x4F18;&#x70B9;&#xFF1A;&#x7ADE;&#x4E89;&#x7684;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#xFF0C;&#x63D0;&#x9AD8;&#x7A0B;&#x5E8F;&#x54CD;&#x5E94;&#x901F;&#x5EA6;</li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;&#x59CB;&#x7EC8;&#x5F97;&#x4E0D;&#x5230;&#x9501;&#x7ADE;&#x4E89;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F7F;&#x7528;&#x81EA;&#x65CB;&#x4F1A;&#x6D88;&#x8017;CPU</li>
+<li>&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x8FFD;&#x6C42;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#xFF0C;&#x540C;&#x6B65;&#x5757;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;</li>
+</ul>
+</li>
+<li>&#x91CD;&#x91CF;&#x7EA7;&#x9501;&#x72B6;&#x6001;<ul>
+<li>&#x4F18;&#x70B9;&#xFF1A;&#x7EBF;&#x7A0B;&#x7ADE;&#x4E89;&#x4E0D;&#x4F7F;&#x7528;&#x81EA;&#x65CB;</li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;&#x7EBF;&#x7A0B;&#x963B;&#x585E;&#xFF0C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x7F13;&#x6162;</li>
+<li>&#x9002;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x8FFD;&#x6C42;&#x541E;&#x5410;&#x91CF;&#xFF0C;&#x540C;&#x6B65;&#x5757;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8F83;&#x957F;</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x5347;&#x7EA7;&#x4E0D;&#x80FD;&#x964D;&#x7EA7;</p>
+</blockquote>
+<h3 id="&#x5728;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x6570;&#x636E;">&#x5728;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x6570;&#x636E;</h3>
+<h4 id="&#x5C06;&#x6570;&#x636E;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x5E76;&#x5C06;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;">&#x5C06;&#x6570;&#x636E;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x5E76;&#x5C06;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;</h4>
+<p>&#x8981;&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#x52A0;synchronized</p>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyData</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">()</span></span>{
+        j++;
+        System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;&quot;</span>+Thread.currentThread().getName()+<span class="hljs-string">&quot;j&#x4E3A;&#xFF1A;&quot;</span>+j);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dec</span><span class="hljs-params">()</span></span>{
+        j--;
+        System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;&quot;</span>+Thread.currentThread().getName()+<span class="hljs-string">&quot;j&#x4E3A;&#xFF1A;&quot;</span>+j);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getData</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> j;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddRunnable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>{
+
+    MyData data;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">AddRunnable</span><span class="hljs-params">(MyData data)</span></span>{
+        <span class="hljs-keyword">this</span>.data=data;
+    }
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        data.add();
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DecRunnable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span> </span>{
+
+    MyData data;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DecRunnable</span><span class="hljs-params">(MyData data)</span></span>{
+        <span class="hljs-keyword">this</span>.data=data;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        data.dec();
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    MyData data = <span class="hljs-keyword">new</span> MyData();
+    Runnable add = <span class="hljs-keyword">new</span> AddRunnable(data);
+    Runnable dec = <span class="hljs-keyword">new</span> DecRunnable(data);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>; i++){
+        <span class="hljs-keyword">new</span> Thread(add).start();
+        <span class="hljs-keyword">new</span> Thread(dec).start();
+    }
+}
+</code></pre>
+<h4 id="runnable&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x7C7B;">Runnable&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x7C7B;</h4>
+<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyData</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">()</span> </span>{
+        j++;
+        System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;&quot;</span> + Thread.currentThread().getName() + <span class="hljs-string">&quot;j&#x4E3A;&#xFF1A;&quot;</span> + j);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dec</span><span class="hljs-params">()</span> </span>{
+        j--;
+        System.out.println(<span class="hljs-string">&quot;&#x7EBF;&#x7A0B;&quot;</span> + Thread.currentThread().getName() + <span class="hljs-string">&quot;j&#x4E3A;&#xFF1A;&quot;</span> + j);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getData</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> j;
+    }
+
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestThread</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">final</span> MyData data = <span class="hljs-keyword">new</span> MyData();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">2</span>; i++) {
+            <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+                <span class="hljs-meta">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                    data.add();
+                }
+            }).start();
+            <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() {
+                <span class="hljs-meta">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                    data.dec();
+                }
+            }).start();
+        }
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Java多线程.html" class="navigation navigation-prev " aria-label="Previous page: Java多线程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Java爬虫.html" class="navigation navigation-next " aria-label="Next page: Java爬虫">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java多线程并发","level":"1.8.6","depth":2,"next":{"title":"Java爬虫","level":"1.8.7","depth":2,"path":"学习java/Java爬虫.md","ref":"学习java/Java爬虫.md","articles":[]},"previous":{"title":"Java多线程","level":"1.8.5","depth":2,"path":"学习java/Java多线程.md","ref":"学习java/Java多线程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-anchor-navigation-ex","todo","code","-katex","github","-summary","search-pro","chapter-fold","theme-comscore","toggle-chapters","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/BluePrintYang"},"livereload":{},"todo":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"showGoTop":true,"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"yanglonglong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"My Study Note","language":"zh-hans","links":{"sidebar":{"My Blog":"https://www.yangllong.top/"}},"gitbook":"*"},"file":{"path":"学习java/Java多线程并发.md","mtime":"2020-06-29T16:04:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-14T07:08:33.123Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
