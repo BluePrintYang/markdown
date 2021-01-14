@@ -1,0 +1,43 @@
+{
+  "title": "My Study Note",
+  "language": "zh-hans",
+  "author": "yanglonglong",
+  "links": {
+    "sidebar": {
+      "My Blog": "https://www.yangllong.top/"
+    }
+  },
+  "plugins": [
+    "-search",
+    "-lunr",
+    "-sharing",
+    "-anchor-navigation-ex",
+    "todo",
+    "code",
+    "katex",
+    "github",
+    "summary",
+    "search-pro",
+    "chapter-fold",
+    "theme-comscore",
+    "toggle-chapters",
+    "flexible-alerts"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "showGoTop": true,
+      "isRewritePageTitle": true,
+      "isShowTocTitleIcon": true,
+      "tocLevel1Icon": "fa fa-hand-o-right",
+      "tocLevel2Icon": "fa fa-hand-o-right",
+      "tocLevel3Icon": "fa fa-hand-o-right"
+    },
+    "code": {
+      "copyButtons": true
+    },
+    "github": {
+      "url": "https://github.com/BluePrintYang"
+    }
+  }
+}
